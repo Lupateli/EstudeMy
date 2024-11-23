@@ -1,0 +1,94 @@
+body{
+    margin: 0%;
+}
+header{
+    background-color: rgb(198, 225, 240);
+    width: 100%;
+    height: 8vw;
+}
+
+main ul{
+    padding: 15px 5px 15px 25px;
+    border-radius: 15px; 
+}
+.card-wrapper{
+    background-color: aliceblue;
+    width: vw;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.card-list .card-item{
+    list-style: none;
+}
+.card-list .card-item .card-link{
+    height: 24vw;
+    user-select: none;
+    display: block;
+    padding: 18px;
+    background: white;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.431);
+    transition: 0.2s ease;
+}
+.card-list .card-item .card-link:hover{
+    border-color: black;
+}
+
+.card-list .card-link .card-img{
+    width: 100%;
+    aspect-ratio: 16 / 9 ;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card-list .card-link .badge{
+    color: blue;
+    padding: 0.95rem;
+    font-weight: 500;
+    margin: 13px 0 14px;
+    background-color: rgb(182, 248, 252);
+    width: fit-content;
+    border-radius: 50px;
+}
+.card-list .card-link .badge.dois{
+    color: rgb(255, 77, 0);
+    background: rgb(245, 231, 225);
+}
+.card-list .card-link .badge.treis{
+    color: gold;
+    background: rgb(248, 244, 227);
+}
+.card-list .card-link .badge.quatro{
+    color: green;
+    background: rgb(229, 253, 229);
+}
+.card-list .card-link .badge.cinco{
+    color: purple;
+    background: rgb(246, 217, 246);
+}
+.card-list .card-link .badge.seis{
+    color: rgb(0, 247, 255);
+    background: rgb(218, 246, 247);
+}
+.card-list .card-link .card-title{
+    font-size: 1.19rem;
+    color: black;
+    font-weight: 600;
+}
+.card-list .card-link .card-button{
+    height: 30px;
+    width: 30px;
+    color: blue;
+    border-radius: 50%;
+    margin: 15px 0 15px;
+    cursor: pointer;
+    border: 2px solid blue;
+    transform: rotate(-45deg);
+    background-color: rgba(244, 230, 191, 0.869);
+    transition: 0.4s ease;
+}
+.card-list .card-link:hover .card-button{
+    color: #fff;
+    background: blue;
+}

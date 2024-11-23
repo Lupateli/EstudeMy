@@ -1,13 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
- 
-body{
-    height: 100vh;
-}
- 
+
 .container-main{
     margin-left: 7px;
     margin-top: 8px;
