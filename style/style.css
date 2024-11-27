@@ -13,3 +13,16 @@ header{
     min-height: 100px;
     max-height: 140px;
 }
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    align-items: center;
+    background-color: rgba(113, 110, 110, 0.518);
+    height: 150px;
+    color: black;
+    font-size: 1em;
+}
+footer div{
+    margin-right: 150px;
+}
