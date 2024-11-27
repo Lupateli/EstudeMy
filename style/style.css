@@ -7,3 +7,9 @@
 body{
     height: 100vh;
 }
+header{
+    background-color: rgb(198, 225, 240);
+    width: 100%;
+    min-height: 100px;
+    max-height: 140px;
+}

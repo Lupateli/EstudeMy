@@ -1,15 +1,13 @@
 body{
     margin: 0%;
 }
-header{
-    background-color: rgb(198, 225, 240);
-    width: 100%;
-    height: 8vw;
-}
 
 main ul{
     padding: 15px 5px 15px 25px;
     border-radius: 15px; 
+}
+.carrosel{
+    margin-top: 50px;
 }
 .card-wrapper{
     background-color: aliceblue;
@@ -21,7 +19,7 @@ main ul{
     list-style: none;
 }
 .card-list .card-item .card-link{
-    height: 24vw;
+    height: 21em;
     user-select: none;
     display: block;
     padding: 18px;

@@ -24,8 +24,9 @@ nav.menu-central{
     margin-top: 0;
     display: flex;
     align-items: right;
-    justify-content: flex-end;
-    margin-right: 55px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 500px;
  
 }
  
@@ -63,6 +64,8 @@ a:link { text-decoration: none; }
     position: absolute;
     box-shadow: 0 0 2px black;
     display: none;
+    margin-bottom: 50px;
+ 
 }
  
 .dropdown-menu a{
@@ -102,7 +105,8 @@ nav.menu-lateral{
     left: 0; */
     overflow: hidden;
     transition: .2s;
- 
+    position: fixed;
+    z-index: 2;
     height: 100vw;
 }
  

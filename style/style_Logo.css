@@ -1,8 +1,12 @@
 div.logo{
-    height: 9vh;
+    align-items: center;
+    height: 1.1em;
+    width: auto;
+    height: 1.2em;
     font-family: "Jaro";
     font-size: 5vw;
-    display: inline-block;
+    display: flex;
+    margin-right: 100px;
 }
 
 .E{
