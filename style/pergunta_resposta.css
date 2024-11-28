@@ -22,7 +22,7 @@
   .option {
     padding: 10px 20px;
     font-size: 16px;
-    border: 2px solid transparent;
+    border: 6px solid transparent;
     border-radius: 4px;
     background-color: #007BFF;
     color: #fff;
@@ -35,7 +35,7 @@
   }
   
   .option.correct {
-    border-color: green;
+    border-color: rgb(8, 192, 8);
   }
   
   .option.incorrect {
