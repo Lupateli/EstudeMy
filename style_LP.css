@@ -1,0 +1,224 @@
+div.logo{
+    height:10vh;
+    font-family: "Jaro";
+    font-size: 3rem;
+    display: inline-block;
+    margin-left: 5%;
+    
+    
+}
+
+.E{
+    color:#056cf2;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #000;
+
+}
+
+.S{
+    color: #0c87f2;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #000;
+}
+
+.T{
+    color: #0a7307;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #000;
+}
+
+.U{
+    color: #f2cb07;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #000;
+}
+
+.D{
+    color: #f24c27;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #000;
+}
+
+.E2{
+    color: #e8181c;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #000;
+}
+
+.ponto{
+   color: black;
+   -webkit-text-stroke-width: 5px;
+   -webkit-text-stroke-color: #000; 
+}
+
+.M{
+    color: fuchsia;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #000;
+}
+
+.Y{
+    color: fuchsia;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #000;
+}
+
+nav{
+    display: flex;
+  justify-content: space-between
+}
+
+div.quemsomos{
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: normal;
+    padding-right: 30px;
+}
+
+.board img{
+    width: 70%;
+    align-items: center;
+    align-content: center;
+}
+
+div.board{
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-right: 5%;
+    
+
+}
+
+
+
+.baloon1 img{
+    animation: float 2s infinite;
+    width: 90%;
+}
+.baloon2 img{
+    animation: float 1.5s infinite;
+    width: 70%;
+    margin-top: 30%;
+    align-items: center;
+}
+.baloon3 img{
+    animation: float 1.8s infinite;
+    width: 80%;
+}
+
+/* Animação de subir e descer */
+@keyframes float {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-5px); /* Sobe 5px */
+    }
+    100% {
+      transform: translateX(-50%) translateY(0); /* Volta */
+    }
+  }
+ 
+div.baloons{
+    padding-left: 20%;
+    padding-top: 2%;
+    padding-right: 5%;
+
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    align-content: space-between;
+}
+
+div.board-content{
+    display: flex;
+}
+
+
+div.table-content{
+    display:flexbox;
+    padding-bottom: 2%;
+    display: flex;
+    align-content: baseline;
+  
+
+    }
+.table img{
+    width: 52%;
+     margin-left: 5%;
+}
+div.landing-page-title{
+    display:flex;
+    flex-direction: column;
+    margin-left: 550px;
+    justify-content: center;
+    align-self: center;
+}
+.poppins-thin {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+h2{
+        font-family: "Poppins", serif;
+        font-weight: 800;
+        font-style: normal;
+        text-align: center;
+        
+}
+ 
+
+button{
+    display:flex;
+    justify-content: center;
+
+}
+.cadastrar{
+    padding: 12px 24px; /* Espaçamento interno do botão */
+    margin-bottom: 1%;
+    background-color: #2b71c6; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de mão ao passar por cima */
+    transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+    justify-content: center;
+    align-items: center;
+    margin-left: 75px;
+    }
+    
+    .cadastrar:hover {
+        background-color: #66d0f9; /* Cor de fundo ao passar o mouse */
+        transform: scale(1.1); /* Efeito de aumentar o botão ao passar o mouse */
+    }
+    
+    .cadastrar:focus {
+        outline: none; /* Remove o contorno ao focar */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra discreta ao focar */
+    }
+    .login{
+        margin-left: 20px;
+        padding: 12px 24px; /* Espaçamento interno do botão */
+        background-color: white; /* Cor de fundo do botão */
+        color: #2b71c6;; /* Cor do texto */
+        border: solid; /* Sem borda */
+        border-radius: 8px; /* Bordas arredondadas */
+        font-size: 16px; /* Tamanho da fonte */
+        cursor: pointer; /* Cursor de mão ao passar por cima */
+        transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+        margin-left: 90px;    
+    }
+        
+        .login:hover {
+            background-color: #eef8ff; /* Cor de fundo ao passar o mouse */
+            transform: scale(1.1); /* Efeito de aumentar o botão ao passar o mouse */
+        }
+
+        .login:focus {
+            outline: none; /* Remove o contorno ao focar */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra discreta ao focar */
+        }
+
+    
