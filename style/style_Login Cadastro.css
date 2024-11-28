@@ -1,0 +1,124 @@
+body {
+    font-family: "Jaro";
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    letter-spacing: 3px;
+  
+}
+
+.login-container {
+    background-color: #007bff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    max-height: 700px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.login-container h1 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-color: #000;
+}
+.inputs {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    letter-spacing: 3px;
+}
+
+
+
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    margin-top: 1px; 
+    margin-left: 30px; 
+}
+
+.checkbox-container label {
+    color: white;
+    -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-color: #000;
+}
+.lembrar{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+.lembrar:checked{
+    border-radius: 4px;
+    background: rgb(22, 221, 221);
+}
+
+.lembrar:checked::after {
+    content: '✔';
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2px;
+    left: 0.4px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 10%; 
+    
+}
+
+.entrar,.cadastrar-se,.cadastrar{
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #28a745;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+    -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-color: #000;
+    font-size: 20px;
+}
+
+.cadastrar{
+    margin-top: 15px;
+
+}
+
+.cadastrar-se {
+    background-color: #dc3545;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
