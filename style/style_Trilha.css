@@ -8,7 +8,7 @@
     background-color: #0c87f2;
     border-radius: 30px;
     margin-top: 30px;
-    margin-left: 90px;
+    margin-left: 250px;
 }
 
 h3{
@@ -39,7 +39,7 @@ button:active{
 
 .trilha1{
     /*background-color: bisque;*/
-    padding-left: 540px;
+    padding-left: 840px;
     justify-content: center;
     align-items: center;
 }
@@ -47,24 +47,24 @@ button:active{
 .trilha2{
     /*background-color: aqua;*/
     display: flex;
-    padding-left: 425px;
+    padding-left: 725px;
 }
 
 .trilha3{
     /*background-color: aquamarine;*/
     display: flex;
-    padding-left: 300px;
+    padding-left: 600px;
 }
 
 .trilha4{
     /*background-color: orange;*/
     display: flex;
-    padding-left: 425px;
+    padding-left: 725px;
 }
 
 .trilha5{
     /*background-color: orchid;*/
-    padding-left: 540px;
+    padding-left: 840px;
     justify-content: center;
     align-items: center;
 }
@@ -120,14 +120,14 @@ button:active{
 
   .trilha6{
     /*background-color: bisque;*/
-    padding-left: 540px;
+    padding-left: 840px;
     justify-content: center;
     align-items: center;
 }
 
 .trilha10{
     /*background-color: bisque;*/
-    padding-left: 540px;
+    padding-left: 840px;
     justify-content: center;
     align-items: center;
 }
@@ -135,19 +135,19 @@ button:active{
 .trilha7{
     /*background-color: orange;*/
     display: flex;
-    padding-left: 650px;
+    padding-left: 950px;
 }
 
 .trilha8{
     /*background-color: orange;*/
     display: flex;
-    padding-left: 760px;
+    padding-left: 1060px;
 }
 
 .trilha9{
     /*background-color: orange;*/
     display: flex;
-    padding-left: 650px;
+    padding-left: 950px;
 }
 
 
@@ -155,7 +155,7 @@ button:active{
 #card {
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 60%;
     transform: translate(-50%, -50%) scale(0.8); /* Começa menor */
     background-color: white;
     padding: 20px;
