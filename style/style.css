@@ -24,7 +24,7 @@ footer{
     color: black;
     font-size: 1em;
     font-size: 1.2em;
-    z-index: 2;
+    z-index: 1;
     position: absolute;
 }
 
