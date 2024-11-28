@@ -3,11 +3,14 @@ body{
 }
 
 main ul{
+    display: flex;
     padding: 15px 5px 15px 25px;
     border-radius: 15px; 
+    margin-bottom: 2%;
 }
 .carrosel{
     margin-top: 50px;
+
 }
 .card-wrapper{
     background-color: aliceblue;
