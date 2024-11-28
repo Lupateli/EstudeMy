@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Configurações</title>
-    <link rel="stylesheet" href="/style/style_config.css">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="/style/style_sobre_nos.css">
+    <link rel="stylesheet" href="/style/fale_conosco.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <div>
         <nav class="menu-central">
             <div class="logo">
@@ -33,12 +35,19 @@
                         </a>
                     </li>
                     <li class="perfil">
-                        <a href="index_perfil.html">
+                        <a href="/pages/index_perfil.html">
                             <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#080707"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg></span>
                             <span >Perfil</span>
                         </a>                    
                     </li>
                     
+                    <li class="/pages/config">
+                        <a href="config.html">
+                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#080707"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg></span>
+                            <span >Configurações</span>
+                        </a>    
+                    </li>
+
                     <li class="dropdown">
                         <a href="#">
                             <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#080707"><path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"/></svg></span>
@@ -46,54 +55,56 @@
                         </a>
                             <div class="dropdown-menu">
                             <a href="/pages/conta.html">Conta</a>
-                            <a href="/pages/ConsultAi.html">Sobre Nós</a>
+                            <a href="/pages/index_sobre_nos.html">Sobre Nós</a>
                             <a href="/pages/fale_conosco.html">Fale Conosco</a>
-                            <a href="/pages/FAQ.html">FAQ</a>
-                            <a href="">Sair</a>
+                            <a href="/pages/pergunta_resposta.html">FAQ</a>
+                            <a href="/pages/index_LP.html">Sair</a>
                         </div>
                     </li>    
                 </ul>
             </div>    
         </nav>
-    <div class="container">
-        <h1>Configurações</h1>
-        <form>
-            <!-- Configurações de conta -->
-            <section>
-                <h2>Conta</h2>
-                <label for="username">Nome de usuário:</label>
-                <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário">
-                
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
-            </section>
-
-            <!-- Configurações de privacidade -->
-            <section>
-                <h2>Privacidade</h2>
-                <label for="notifications">
-                    <input type="checkbox" id="notifications" name="notifications">
-                    Receber notificações
-                </label>
-                
-                <label for="public-profile">
-                    <input type="checkbox" id="public-profile" name="public-profile">
-                    Tornar perfil público
-                </label>
-            </section>
-
-            <!-- Tema -->
-            <section>
-                <h2>Tema</h2>
-                <label for="theme">Escolha o tema:</label>
-                <select id="theme" name="theme">
-                    <option value="light">Claro</option>
-                    <option value="dark">Escuro</option>
-                </select>
-            </section>
-
-            <button type="submit">Salvar alterações</button>
-        </form>
-    </div>
+    
+    <header>
+        <h1>Sobre Nós</h1>
+        <p>Conheça nossa equipe e suas áreas de especialização em tecnologia!</p>
+    </header>
+    <main>
+        <section class="team">
+            <div class="member">
+                <img src="/img/wallacy.png" alt="Pessoa 1">
+                <h2>Wallacy José</h2>
+                <p>Especialista em Desenvolvimento Web Front-End.</p>
+            </div>
+            <div class="member">
+                <img src="/img/milone.png" alt="Pessoa 2">
+                <h2>João Gabriel</h2>
+                <p>Engenheiro de Software focado em desenvolvimento Back-End.</p>
+            </div>
+            <div class="member">
+                <img src="/img/gabriel.png" alt="Pessoa 3">
+                <h2>Gabriel Campanholi</h2>
+                <p>Desenvolvedor Full-Stack, apaixonado por criar soluções completas e inovadoras.</p>
+            </div>
+            <div class="member">
+                <img src="/img/beatriz.png" alt="Pessoa 4">
+                <h2>Beatriz Siqueira</h2>
+                <p>Especialista em Data Science e Inteligência Artificial.</p>
+            </div>
+            <div class="member">
+                <img src="/img/caike.png" alt="Pessoa 5">
+                <h2>Caike Souza</h2>
+                <p>Designer de Interfaces e Desenvolvedor Mobile, com foco em UX/UI e Flutter.</p>
+            </div>
+            <div class="member">
+                <img src="/img/joao.png" alt="Pessoa 5">
+                <h2>João Victor</h2>
+                <p>Líder de projetos e desenvolvedor full-stack</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Nossa Equipe de Tecnologia. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
