@@ -133,6 +133,7 @@ div.logo{
 div .item-menu-central{
     display: flex;
     align-self: center;
+    margin-right: 50px;
 }
 
 nav.menu-central{

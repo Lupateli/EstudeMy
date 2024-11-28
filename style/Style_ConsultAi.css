@@ -12,6 +12,10 @@ header {
     color: #fff;
     padding: 1em 0;
 }
+header a{
+    text-decoration: none;
+    color: white;
+}
 
 header .container {
     display: flex;

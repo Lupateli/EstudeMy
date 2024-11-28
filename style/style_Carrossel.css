@@ -37,8 +37,9 @@ main ul{
     border-color: black;
 }
 
-.card-list .card-link .card-img{
-    width: 100%;
+.card-list .card-link .card-img {
+    width: 100%t;
+    height: 10rem;
     aspect-ratio: 16 / 9 ;
     object-fit: cover;
     border-radius: 10px;
