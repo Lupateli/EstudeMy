@@ -1,0 +1,194 @@
+.unidade{
+    background-color: #0c87f2;
+    border-radius: 30px;
+    padding-left: 90px;
+}
+
+.unidade1{
+    background-color: #0c87f2;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-left: 90px;
+}
+
+h3{
+    padding-left: 15px;
+}
+
+p{
+    padding-left: 20px;
+}
+
+button{
+    border-radius: 50%;
+    padding: 50px;
+    background-color: #0c87f2;
+    box-shadow: 0 5px 0 black;
+}
+
+button:hover{
+    box-shadow: 5px;
+    transform: translateY(3px);
+}
+
+button:active{
+    box-shadow: none;
+    transform: translateY(7px);
+}
+
+
+.trilha1{
+    /*background-color: bisque;*/
+    padding-left: 540px;
+    justify-content: center;
+    align-items: center;
+}
+
+.trilha2{
+    /*background-color: aqua;*/
+    display: flex;
+    padding-left: 425px;
+}
+
+.trilha3{
+    /*background-color: aquamarine;*/
+    display: flex;
+    padding-left: 300px;
+}
+
+.trilha4{
+    /*background-color: orange;*/
+    display: flex;
+    padding-left: 425px;
+}
+
+.trilha5{
+    /*background-color: orchid;*/
+    padding-left: 540px;
+    justify-content: center;
+    align-items: center;
+}
+
+.trilha5{
+    position: relative;
+}
+.trilha5 .tutorial-tooltip{
+    position: absolute;
+    top: -60px;
+    padding: 16px;
+    margin-left: 65px;
+    border-radius: 8px;
+    background-color: white;
+    color: #0c87f2;
+    box-shadow: 0 2px 5px black;
+    animation: float 1.5s infinite;
+}
+.trilha5 .tutorial-tooltip::after{
+    position: absolute;
+    bottom: -8px;
+    right: 45%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid white;
+    border-style: solid;
+}
+
+.bi-star-fill{
+    color: yellow;
+   font-size: 23px;
+}
+
+.bi-star{
+    font-size: 24px;
+}
+
+/* Animação de subir e descer */
+@keyframes float {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-5px); /* Sobe 5px */
+    }
+    100% {
+      transform: translateX(-50%) translateY(0); /* Volta */
+    }
+  }
+
+  .trilha6{
+    /*background-color: bisque;*/
+    padding-left: 540px;
+    justify-content: center;
+    align-items: center;
+}
+
+.trilha10{
+    /*background-color: bisque;*/
+    padding-left: 540px;
+    justify-content: center;
+    align-items: center;
+}
+
+.trilha7{
+    /*background-color: orange;*/
+    display: flex;
+    padding-left: 650px;
+}
+
+.trilha8{
+    /*background-color: orange;*/
+    display: flex;
+    padding-left: 760px;
+}
+
+.trilha9{
+    /*background-color: orange;*/
+    display: flex;
+    padding-left: 650px;
+}
+
+
+/* Card centralizado com animação */
+#card {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%) scale(0.8); /* Começa menor */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: black;
+    opacity: 0; /* Começa invisível */
+    z-index: 20; /* Sobrepõe outros elementos */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+#card.hidden {
+    transform: translate(-50%, -50%) scale(0.8); /* Card pequeno ao esconder */
+    opacity: 0; /* Card invisível */
+}
+
+#card.visible {
+    transform: translate(-50%, -50%) scale(1); /* Card cresce ao aparecer */
+    opacity: 1; /* Card visível */
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    align-items: center;
+    background-color: rgba(113, 110, 110, 0.518);
+    height: 150px;
+    color: black;
+    font-size: 1em;
+}
+footer div{
+    margin-right: 150px;
+}
