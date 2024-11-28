@@ -81,12 +81,12 @@ a:link { text-decoration: none; }
  
  
  
-/*
+
 .body-wrapper{
     display: flex;
     align-items: start;
 }
-*/ 
+ 
 .body-wrapper > .container{
     margin-top: 0 !important;
 }
@@ -110,6 +110,7 @@ nav.menu-lateral{
     position: fixed;
     z-index: 2;
     height: 100%;
+    margin-top: 0;
 }
  
  
