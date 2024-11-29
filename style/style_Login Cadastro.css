@@ -7,7 +7,6 @@ body {
     height: 100vh;
     margin: 0;
     letter-spacing: 3px;
-  
 }
 
 .login-container {
@@ -30,6 +29,7 @@ body {
     -webkit-text-stroke-width: 0.9px;
     -webkit-text-stroke-color: #000;
 }
+
 .inputs {
     width: calc(100% - 40px);
     padding: 10px;
@@ -41,60 +41,62 @@ body {
     letter-spacing: 3px;
 }
 
-
-
-.checkbox-container{
+.checkbox-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start; 
-    margin-top: 1px; 
-    margin-left: 30px; 
+    position: relative;
+    margin-top: 5px;
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem linha quando necessário */
 }
 
-.checkbox-container label {
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    /* Desloca o grupo 10% para a direita do input acima */
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+.checkbox-group label {
     color: white;
     -webkit-text-stroke-width: 0.9px;
     -webkit-text-stroke-color: #000;
 }
-.lembrar{
-    width: 15px;
-    height: 15px;
-    margin-right: 10px;
-    cursor: pointer;
-    appearance: none;
-    border-radius: 4px;
-    background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-}
-.lembrar:checked{
-    border-radius: 4px;
-    background: rgb(22, 221, 221);
-}
 
-.lembrar:checked::after {
-    content: '✔';
-    color: rgb(0, 0, 0);
+.forgot-password {
+    position: absolute;
+    right: 10%;
+    /* Alinha 10% à esquerda do input acima */
+    color: #000000;
+    text-decoration: none;
     font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: -2px;
-    left: 0.4px;
+    cursor: pointer;
 }
 
+.forgot-password:hover {
+    text-decoration: underline;
+}
 
 .buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    padding: 0 10%; 
-    
+    gap: 10px;
+    /* Para garantir espaçamento entre os botões quando empilhados */
 }
 
-.entrar,.cadastrar-se,.cadastrar{
-    width: 150px;
+.entrar,
+.cadastrar-se,
+.cadastrar {
+    width: calc(50% - 10px);
+    /* Botões lado a lado com espaçamento */
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -109,16 +111,9 @@ body {
     font-size: 20px;
 }
 
-.cadastrar{
-    margin-top: 15px;
-
-}
-
 .cadastrar-se {
     background-color: #dc3545;
 }
-
-
 
 button:hover {
     opacity: 0.9;
@@ -181,4 +176,39 @@ button:hover {
     font-size: 14px;
     font-weight: bold;
     color: #383838;
+}
+
+/* Layout responsivo */
+@media (max-width: 450px) {
+    .buttons {
+        flex-direction: column;
+        /* Empilha botões em telas menores */
+    }
+
+    .entrar,
+    .cadastrar-se {
+        width: 100%;
+        /* Botões ocupam toda a largura */
+    }
+
+    .checkbox-container {
+        flex-direction: column;
+        /* Empilha elementos quando necessário */
+        align-items: center;
+        /* Centraliza ao meio */
+    }
+
+    .checkbox-group {
+        margin-left: 0;
+        /* Remove o deslocamento horizontal no modo responsivo */
+        margin-bottom: 10px;
+    }
+
+    .forgot-password {
+        position: static;
+        /* Remove o posicionamento absoluto */
+        text-align: center;
+        /* Centraliza o texto */
+        margin-top: 5px;
+    }
 }
