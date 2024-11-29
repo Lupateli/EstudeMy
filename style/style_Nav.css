@@ -7,10 +7,11 @@
 div .item-menu-central{
     display: flex;
     align-self: center;
- 
 }
  
- 
+.item-menu-central a{
+    font-size: 1.1vw;
+}
  
 /*.container{
     max-width: 140px;
@@ -26,8 +27,7 @@ nav.menu-central{
     align-items: right;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin-left: 500px;
- 
+    padding-left: 100px;
 }
  
 .logo{
