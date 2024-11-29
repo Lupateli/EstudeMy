@@ -1,7 +1,35 @@
-initialSubmit.addEventListener("click", function () {
+
+const professorRadio = document.getElementById("professorRadio");
+const alunoRadio = document.getElementById("alunoRadio");
+const loginContainer = document.getElementById("loginContainer");
+const submitButton = document.getElementById("submitButton");
+const alertBox = document.getElementById("customAlert");
+const alertTitle = document.getElementById("alertTitle");
+const alertMessage = document.getElementById("alertMessage");
+const closeAlertButton = document.getElementById("closeAlert");
+
+let userTypeSelected = null;
+
+function showAlert(title, message1, message2) {
+    alertTitle.textContent = title;
+    alertMessage.innerHTML = `<p>${message1}</p><p class="secondary-message">${message2}</p>`;
+    alertBox.style.display = "flex";
+}
+
+closeAlertButton.addEventListener("click", function () {
+    alertBox.style.display = "none";
+
+    if (userTypeSelected) {
+        window.location.href = "login.html";
+    }
+});
+
+professorRadio.addEventListener("change", function () {
     if (professorRadio.checked) {
+        userTypeSelected = "professor";
+
         loginContainer.innerHTML = `
-        <h1> Professor <br> <div class="logo">
+        <h1> Cadastro Professor <br> <div class="logo">
             <span class="E">E</span>
             <span class="S">S</span>
             <span class="T">T</span>
@@ -19,17 +47,28 @@ initialSubmit.addEventListener("click", function () {
             <input type="password" placeholder="Confirme sua Senha" name="confirmaSenhaProfessor" class="inputs" required>
             <div class="cadastros">
                 <button class="cadastrar" id="professorSubmit">Cadastrar-se</button>
-            </div>`;
+        </div>`;
 
-        // Adiciona evento ao botão de cadastro para Professor
         document.getElementById("professorSubmit").addEventListener("click", function () {
-            alert("Cadastro de Professor realizado com sucesso!                                 Dados enviado para analise!");
-            window.location.href = "main_page.html";
+            showAlert(
+                "Cadastro",
+                "Cadastro de Professor realizado com sucesso!",
+                "Dados enviados para análise!"
+            );
         });
-    } else if (alunoRadio.checked) {
-        alert("Cadastro realizado com sucesso!");
-        window.location.href = "main_page.html";
-    } else {
-        alert("Selecione um tipo de usuário antes de continuar.");
+    }
+});
+
+alunoRadio.addEventListener("change", function () {
+    if (alunoRadio.checked) {
+        userTypeSelected = "aluno";
+    }
+});
+
+submitButton.addEventListener("click", function () {
+    if (alunoRadio.checked) {
+        showAlert("Cadastro", "Cadastro de Aluno realizado com sucesso!", "");
+    } else if (!professorRadio.checked && !alunoRadio.checked) {
+        showAlert("Erro", "Selecione um tipo de usuário antes de continuar.", "");
     }
 });
