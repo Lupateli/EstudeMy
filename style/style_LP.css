@@ -137,21 +137,19 @@ div.board-content{
 
 
 div.table-content{
-    display:flexbox;
+    display:flex;
     padding-bottom: 2%;
-    display: flex;
     align-content: baseline;
-  
 
     }
 .table img{
-    width: 52%;
-     margin-left: 5%;
+    width: 18vw;
+    margin-left: 5%;
 }
 div.landing-page-title{
     display:flex;
     flex-direction: column;
-    margin-left: 550px;
+    margin-left: 36.5%;
     justify-content: center;
     align-self: center;
 }
@@ -173,6 +171,7 @@ h2{
 button{
     display:flex;
     justify-content: center;
+    width: 22rem;
 
 }
 .cadastrar{
@@ -187,7 +186,8 @@ button{
     transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
     justify-content: center;
     align-items: center;
-    margin-left: 75px;
+    margin-left: 35px;
+
     }
     
     .cadastrar:hover {
@@ -200,7 +200,7 @@ button{
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra discreta ao focar */
     }
     .login{
-        margin-left: 20px;
+        margin-left: 35px;
         padding: 12px 24px; /* Espaçamento interno do botão */
         background-color: white; /* Cor de fundo do botão */
         color: #2b71c6;; /* Cor do texto */
@@ -209,7 +209,6 @@ button{
         font-size: 16px; /* Tamanho da fonte */
         cursor: pointer; /* Cursor de mão ao passar por cima */
         transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
-        margin-left: 90px;    
     }
         
         .login:hover {
