@@ -1,14 +1,26 @@
 /*Index_LP*/
+body{
+    margin: 0;
+    padding: 0;
+}
 div.logo{
-    height:10vh;
+    height: auto;
     font-family: "Jaro";
     font-size: 3rem;
     display: inline-block;
-    margin-left: 5%;
-    
-    
+    margin-left: 5%;  
 }
-
+.nav_lp{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav_lp a{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(235, 236, 237);
+    padding: 4px 8px;
+    border-radius: 5px;
+}
 .E{
     color:#056cf2;
     -webkit-text-stroke-width: 5px;
@@ -66,7 +78,7 @@ div.logo{
 
 nav{
     display: flex;
-  justify-content: space-between
+    justify-content: space-between;
 }
 
 div.quemsomos{
@@ -74,9 +86,12 @@ div.quemsomos{
     font-weight: 800;
     font-style: normal;
     padding-right: 30px;
+    margin-right: 55px;
+    margin-left: auto;
 }
 
 .board img{
+    min-width: 70px;
     width: 70%;
     align-items: center;
     align-content: center;
@@ -94,16 +109,19 @@ div.board{
 
 .baloon1 img{
     animation: float 2s infinite;
+    min-width: 52px;
     width: 90%;
 }
 .baloon2 img{
     animation: float 1.5s infinite;
+    min-width: 45px;
     width: 70%;
     margin-top: 30%;
     align-items: center;
 }
 .baloon3 img{
     animation: float 1.8s infinite;
+    min-width: 45px;
     width: 80%;
 }
 
@@ -133,25 +151,28 @@ div.baloons{
 
 div.board-content{
     display: flex;
+    margin-right: 1vw;
 }
 
 
 div.table-content{
     display:flex;
+    width: 100%;
     padding-bottom: 2%;
     align-content: baseline;
 
     }
 .table img{
+    min-width: 120px;
     width: 18vw;
     margin-left: 5%;
 }
 div.landing-page-title{
     display:flex;
     flex-direction: column;
-    margin-left: 36.5%;
-    justify-content: center;
-    align-self: center;
+    font-size: 1vw;
+    font-family: "Poppins", serif;
+    margin-left: 22%;
 }
 .poppins-thin {
     font-family: "Poppins", serif;
@@ -159,20 +180,18 @@ div.landing-page-title{
     font-style: normal;
   }
 
-h2{
-        font-family: "Poppins", serif;
-        font-weight: 800;
-        font-style: normal;
-        text-align: center;
-        
-}
  
 
 button{
     display:flex;
     justify-content: center;
-    width: 22rem;
+    width: 22vw;
 
+}
+.entrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center
 }
 .cadastrar{
     padding: 12px 24px; /* Espaçamento interno do botão */
@@ -181,44 +200,52 @@ button{
     color: white; /* Cor do texto */
     border: none; /* Sem borda */
     border-radius: 8px; /* Bordas arredondadas */
-    font-size: 16px; /* Tamanho da fonte */
+    font-size: 1.3vw; /* Tamanho da fonte */
     cursor: pointer; /* Cursor de mão ao passar por cima */
     transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
-    justify-content: center;
-    align-items: center;
-    margin-left: 35px;
-
-    }
+}
     
-    .cadastrar:hover {
-        background-color: #66d0f9; /* Cor de fundo ao passar o mouse */
+.cadastrar:hover {
+    background-color: #66d0f9; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Efeito de aumentar o botão ao passar o mouse */
+}
+
+.cadastrar:focus {
+    outline: none; /* Remove o contorno ao focar */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra discreta ao focar */
+}
+.login{
+    padding: 12px 24px; /* Espaçamento interno do botão */
+    background-color: white; /* Cor de fundo do botão */
+    color: #2b71c6;; /* Cor do texto */
+    border: solid; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1.3vw; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de mão ao passar por cima */
+    transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+}
+    
+    .login:hover {
+        background-color: #eef8ff; /* Cor de fundo ao passar o mouse */
         transform: scale(1.1); /* Efeito de aumentar o botão ao passar o mouse */
     }
-    
-    .cadastrar:focus {
+
+    .login:focus {
         outline: none; /* Remove o contorno ao focar */
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra discreta ao focar */
     }
-    .login{
-        margin-left: 35px;
-        padding: 12px 24px; /* Espaçamento interno do botão */
-        background-color: white; /* Cor de fundo do botão */
-        color: #2b71c6;; /* Cor do texto */
-        border: solid; /* Sem borda */
-        border-radius: 8px; /* Bordas arredondadas */
-        font-size: 16px; /* Tamanho da fonte */
-        cursor: pointer; /* Cursor de mão ao passar por cima */
-        transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
-    }
-        
-        .login:hover {
-            background-color: #eef8ff; /* Cor de fundo ao passar o mouse */
-            transform: scale(1.1); /* Efeito de aumentar o botão ao passar o mouse */
-        }
 
-        .login:focus {
-            outline: none; /* Remove o contorno ao focar */
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra discreta ao focar */
-        }
-
+.footer_lp{
+    margin: 0px 20%;
+    bottom: 0;
+    position: fixed;
+    height: 28vh;
+    width: 60%;
+    text-align: center;
+    background-color: rgba(253, 5, 253, 0.496);
+    text-shadow: 1px 1px black;
+    color: white;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.657);
+    border-radius: 15px 15px 0px 0px;
+}
     
