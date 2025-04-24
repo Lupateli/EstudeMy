@@ -30,7 +30,7 @@ const Topo = () => {
 
   const dropdownItems = [
     { href: "/pages/conta", icon: <Person size={14} />, label: "Conta" },
-    { href: "/pages/sobre-nos", icon: <InfoCircle size={14} />, label: "Sobre Nós" },
+    { href: "/pages/calendario", icon: <InfoCircle size={14} />, label: "Calendário" },
     { href: "/pages/faleConosco", icon: <Headset size={14} />, label: "Fale Conosco" },
     { href: "/pages/faq", icon: <QuestionCircle size={14} />, label: "FAQ" },
     { href: "/pages/logout", icon: <ArrowRight size={14} />, label: "Sair"},

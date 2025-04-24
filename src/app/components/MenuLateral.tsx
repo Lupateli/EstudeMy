@@ -42,7 +42,7 @@ const MenuLateral = () => {
       <Menu>
         {/* Cabeçalho do menu */}
         <MenuItem
-          icon={<List className="text-white" size={20} />}
+          icon={<List className="text-white" size={22} />}
           onClick={() => setCollapsed(!collapsed)}
           style={{ 
             textAlign: "center",
