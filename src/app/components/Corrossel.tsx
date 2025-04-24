@@ -82,7 +82,7 @@ function Carousel() {
   const next = () => setIndex((index + 1) % items.length);
 
   return (
-    <div className="flex flex-col items-center gap-4 bg-slate-100 p-6 rounded-xl w-5xl max-w-dvh mx-auto">
+    <div className="flex flex-col items-center gap-4 bg-slate-100 p-6 rounded-xl w-5xl max-w-dvh mx-auto ">
     <div className="relative flex items-center justify-center gap-4">
       <button onClick={prev} className="text-black px-2 py-5 hover:bg-slate-300 rounded">
         <ChevronLeftIcon />
