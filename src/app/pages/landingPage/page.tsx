@@ -1,5 +1,6 @@
 "use client";
 
+import CoinRain from "@/app/components/CoinRain";
 import NavbarSuperiorLP from "@/app/components/NavbarSuperiorLP";
 import { Jaro } from "next/font/google";
 
@@ -8,12 +9,18 @@ const jaro = Jaro({
   weight: "400", // Jaro só tem um peso
 });
 
+
+
+
 export default function LandingPage() {
   return (
-    <main className="h-screen flex flex-col bg-white text-gray-900">
+    <main className="h-screen flex flex-col bg-white text-gray-900 relative overflow-hidden">
+      {/* Coin rain animado */}
+      <CoinRain />
+
       {/* Navbar */}
-      <div className="shrink-0">
-        <NavbarSuperiorLP />
+      <div className="shrink-0 relative z-20">
+      <NavbarSuperiorLP />
       </div>
 
       {/* Conteúdo principal (Hero + Benefícios) */}
