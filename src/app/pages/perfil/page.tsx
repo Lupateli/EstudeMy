@@ -1,18 +1,20 @@
 import Footer from "@/app/components/Footer";
 import "@/app/styles/style_perfil.css";
-import NavbarSuperior from "@/app/components/NavbarSuperior";
+import Topo from "@/app/components/Topo";
 
 export default function PerfilPage() {
   return (
     <>
-      <NavbarSuperior />
+      <Topo />
       <main className="main">
-        <div className="character">
+        <div className="p-4">
           <img
             src="/img/guerreiro.png"
-            alt="Personagem Guerreiro"
+            alt="Imagem do personagem Guerreiro"
             className="card-img"
           />
+        </div>
+        <div className="character">
           <p>Guerreiro</p>
         </div>
         <div className="buttons-container">
