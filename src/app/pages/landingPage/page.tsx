@@ -1,5 +1,6 @@
 "use client";
 
+import Logo from "@/app/components/Logo";
 import NavbarSuperiorLP from "@/app/components/NavbarSuperiorLP";
 import { Jaro } from "next/font/google";
 
@@ -19,6 +20,7 @@ export default function LandingPage() {
       {/* Conteúdo principal (Hero + Benefícios) */}
       <div className="flex-grow flex flex-col justify-center items-center px-4 py-6 overflow-hidden">
         {/* Hero */}
+        <Logo />
         
         <section className="text-center max-w-3xl mb-10">
           <h1 className={`${jaro.className} text-3xl md:text-5xl mb-4 text-blue-600`}>
