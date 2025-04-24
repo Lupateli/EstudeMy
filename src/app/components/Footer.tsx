@@ -2,8 +2,6 @@ const Footer = () => {
     return (
       <footer className="bg-slate-700 text-white py-6 mt-8">
         <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-          
-          {/* Logo ou Nome do Projeto */}
           <div className="text-lg font-semibold">
             ConsultAi © {new Date().getFullYear()}
           </div>

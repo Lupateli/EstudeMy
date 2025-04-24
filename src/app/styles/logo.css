@@ -5,6 +5,8 @@
     font-family: "Jaro", sans-serif;
     font-size: 4.6vw;
     display: flex;
+    padding: 0px 10px;
+
 }
 
 div.logo {

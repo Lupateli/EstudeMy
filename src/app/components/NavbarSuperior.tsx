@@ -12,14 +12,16 @@ export default function NavbarSuperior() {
 
   const navItems = [
     { href: "/", icon: <HouseDoor />, label: "Home" },
-    { href: "/", icon: <Person />, label: "Perfil" },
-    { href: "/", icon: <Gear />, label: "Configurações" }
+    { href: "/pages/perfil", icon: <Person />, label: "Perfil" },
+    { href: "/pages/configuracoes", icon: <Gear />, label: "Configurações" }
   ];
 
   const dropdownItems = [
-    { href: "/", label: "Conta" },
-    { href: "/", label: "Sobre Nós" },
-    { href: "/", label: "Sair", variant: "danger" }
+    { href: "/pages/conta", label: "Conta" },
+    { href: "/pages/sobre-nos", label: "Sobre Nós" },
+    { href: "/pages/faleConosco", label: "Fale Conosco" },
+    { href: "/pages/faq",  label: "FAQ" },
+    { href: "/pages/logout", label: "Sair", variant: "danger" }
   ];
 
   return (
