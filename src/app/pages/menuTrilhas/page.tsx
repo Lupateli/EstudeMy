@@ -1,5 +1,6 @@
 import NavbarSuperior2 from "@/app/components/NavbarSuperior";
 import Carrossel from "@/app/components/Corrossel"
+import Footer from "@/app/components/Footer"
 
 export default function menuTrilhas(){
       
@@ -16,6 +17,7 @@ export default function menuTrilhas(){
         </div>
         <Carrossel />
         </div>
+        <Footer />
     </>
     );
 }
