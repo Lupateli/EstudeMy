@@ -9,7 +9,7 @@ const Footer = () => {
   
           {/* Redes sociais */}
           <div className="flex flex-row-reverse gap-3">
-            <a href="#https://github.com/Lupateli/EstudeMy" className="hover:text-blue-400">GitHub</a>
+            <a  href="https://github.com/Lupateli/EstudeMy"  target="_blank"  rel="noopener noreferrer"  className="hover:text-blue-400"> Github </a>
           </div>
         </div>
       </footer>
