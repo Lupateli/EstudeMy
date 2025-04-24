@@ -6,19 +6,19 @@ const Form = () => {
             <p className="text-gray-600 mb-6">Entre em contato conosco preenchendo o formulário abaixo. Estamos aqui para ajudar!</p>
             <form className="flex flex-col gap-3">
             <div className="flex flex-col">
-                <label className="text-sm"> Nome :</label>
+                <label className="text-sm text-left"> Nome :</label>
                 <input type="text" placeholder="Seu nome completo." className="rounded-lg py-2 px-4 text-sm border border-gray-30" required></input>
             </div>
             <div className="flex flex-col">
-                <label className="text-sm"> Email :</label>
+                <label className="text-sm text-left"> Email :</label>
                 <input type="text" placeholder="Seu endereço de email." className="rounded-lg py-2 px-4 text-sm border border-gray-30 " required></input>
             </div>
             <div className="flex flex-col">
-                <label className="text-sm"> Assunto :</label>
+                <label className="text-sm text-left"> Assunto :</label>
                 <input type="text" placeholder="Digite o Assunto." className="rounded-lg py-2 px-4 text-sm border border-gray-30" required></input >
             </div>
             <div>
-                <label className="text-sm" > Mensagem: </label>
+                <label className="text-sm text-left" > Mensagem </label>
                 <br></br>
                 <textarea id="message" name="message" placeholder="Escreva sua mensagem..." required className="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"></textarea>
             </div>

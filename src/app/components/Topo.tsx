@@ -5,7 +5,7 @@ import { Navbar, Nav, Container} from 'react-bootstrap';
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/app/components/Logo";
-import {List,Book,BarChart,BookmarkFill,Envelope,BackpackFill,HouseDoor,Person,Gear,ThreeDots,ArrowRight,InfoCircle,Headset,QuestionCircle} from "react-bootstrap-icons";
+import {List,Book,BarChart,BookmarkFill,Envelope,BackpackFill,HouseDoor,Person,Gear,ThreeDots} from "react-bootstrap-icons";
 
 const Topo = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -29,11 +29,11 @@ const Topo = () => {
   ];
 
   const dropdownItems = [
-    { href: "/pages/conta", icon: <Person size={14} />, label: "Conta" },
-    { href: "/pages/sobre-nos", icon: <InfoCircle size={14} />, label: "Sobre Nós" },
-    { href: "/pages/faleConosco", icon: <Headset size={14} />, label: "Fale Conosco" },
-    { href: "/pages/faq", icon: <QuestionCircle size={14} />, label: "FAQ" },
-    { href: "/pages/logout", icon: <ArrowRight size={14} />, label: "Sair"},
+    { href: "/pages/conta", label: "Conta" },
+    { href: "/pages/calendario", label: "Calendário" },
+    { href: "/pages/faleConosco", label: "Fale Conosco" },
+    { href: "/pages/faq",  label: "FAQ" },
+    { href: "/pages/login", label: "Sair", variant: "danger" }
   ];
 
   return (
@@ -171,7 +171,7 @@ const Topo = () => {
                   </Nav.Item>
                 ))}
 
-                <Nav.Item as="li" className="dropdown-container">
+                    <Nav.Item as="li" className="dropdown-container">
                   <div 
                     className="dropdown-toggle"
                     onMouseEnter={() => setShowDropdown(true)}
