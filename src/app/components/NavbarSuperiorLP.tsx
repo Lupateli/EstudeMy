@@ -3,6 +3,8 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import Link from 'next/link';
 import {Person, Gear, List } from 'react-bootstrap-icons';
 import React, { useState } from "react";
+import Logo from "./Logo";
+
 
 export default function NavbarSuperiorLP() {
   const [toggled, setToggled] = useState(false);
@@ -14,7 +16,13 @@ export default function NavbarSuperiorLP() {
   return (
     <Navbar expand="lg" className="menu-central">
       <Container fluid className="px-0">
-       <Navbar.Toggle 
+        <Link href="/" passHref legacyBehavior>
+          <Navbar.Brand className="logo">
+            <Logo />
+          </Navbar.Brand>
+        </Link>
+
+        <Navbar.Toggle 
           aria-controls="top-navbar" 
           onClick={() => setToggled(!toggled)}
           className="border-0 me-3"
