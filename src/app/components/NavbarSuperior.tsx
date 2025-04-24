@@ -21,7 +21,7 @@ export default function NavbarSuperior() {
     { href: "/pages/calendario", label: "Calendário" },
     { href: "/pages/faleConosco", label: "Fale Conosco" },
     { href: "/pages/faq",  label: "FAQ" },
-    { href: "/pages/logout", label: "Sair", variant: "danger" }
+    { href: "/pages/login", label: "Sair", variant: "danger" }
   ];
 
   return (
