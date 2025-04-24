@@ -13,7 +13,7 @@ export default function NavbarSuperior() {
   const navItems = [
     { href: "/pages/menuTrilhas", icon: <HouseDoor />, label: "Home" },
     { href: "/pages/perfil", icon: <Person />, label: "Perfil" },
-    { href: "/pages/configuracoes", icon: <Gear />, label: "Configurações" }
+    /*{ href: "/pages/configuracoes", icon: <Gear />, label: "Configurações" }*/
   ];
 
   const dropdownItems = [

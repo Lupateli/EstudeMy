@@ -19,7 +19,7 @@ const Login = () => {
             </div>
             <p>Não possui conta ?{' '}
                 <a href="/pages/cadastro" className="text-blue-600 hover:underline">
-                    Cadastrar
+                    Cadastrar-se
                 </a>
             </p>
     </div>

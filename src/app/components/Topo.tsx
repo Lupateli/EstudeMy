@@ -25,7 +25,7 @@ const Topo = () => {
   const navItems = [
     { href: "/pages/menuTrilhas", icon: <HouseDoor size={18} />, label: "Home" },
     { href: "/pages/perfil", icon: <Person size={18} />, label: "Perfil" },
-    { href: "/pages/configuracoes", icon: <Gear size={18} />, label: "Configurações" },
+    /*{ href: "/pages/configuracoes", icon: <Gear size={18} />, label: "Configurações" },*/
   ];
 
   const dropdownItems = [
