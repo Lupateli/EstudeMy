@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 
 
-export default function NavbarSuperior() {
+export default function NavbarSuperiorLP() {
   const [toggled, setToggled] = useState(false);
   const navItems = [
     { href: "/page/login", icon: <Person />, label: "Login" },
