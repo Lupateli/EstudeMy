@@ -1,4 +1,6 @@
 @import "tailwindcss";
-@import './styles/logo.css';
-@import 'bootstrap/dist/css/bootstrap.min.css';
-@import './styles/NavbarSuperior.css'
+@import "./styles/logo.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "./styles/NavbarSuperior.css";
+@import "./styles/style_perfil.css";
+@import "./styles/style_nav.css";
