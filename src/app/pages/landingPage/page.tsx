@@ -3,6 +3,7 @@
 import CoinRain from "@/app/components/CoinRain";
 import NavbarSuperiorLP from "@/app/components/NavbarSuperiorLP";
 import { Jaro } from "next/font/google";
+import { Button } from "react-bootstrap";
 
 const jaro = Jaro({
   subsets: ["latin"],
@@ -36,13 +37,13 @@ export default function LandingPage() {
           </p>
            
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <button className="bg-blue-600 text-white px-20 py-3 border-4 border-black shadow-[4px_4px_0_0_#000] rounded-none font-bold transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none">
+            <Button className="bg-blue-600 text-white px-20 py-3 border-4 w-auto min-w-2xs border-black shadow-[4px_4px_0_0_#000] rounded-none font-bold transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none" href="/pages/cadastro">
             Começar agora!
-            </button>
+            </Button>
             
-            <button className="bg-blue-600 text-white px-20 py-3 border-4 border-black shadow-[4px_4px_0_0_#000] rounded-none font-bold transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none">
-            Entrar 
-            </button>
+            <Button className="bg-blue-600 text-white px-20 py-3 border-4 w-auto min-w-2xs border-black shadow-[4px_4px_0_0_#000] rounded-none font-bold transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none" href="/pages/login">
+               Entrar
+            </Button>
           </div>
 
        
