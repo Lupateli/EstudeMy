@@ -9,7 +9,7 @@ import Logo from "./Logo";
 export default function NavbarSuperiorLP() {
   const [toggled, setToggled] = useState(false);
   const navItems = [
-    { href: "/page/login", icon: <Person />, label: "Login" },
+    { href: "/pages/login", icon: <Person />, label: "Login" },
     { href: "/pages/cadastro", icon: <Gear />, label: "Cadastro" }
   ];
 
