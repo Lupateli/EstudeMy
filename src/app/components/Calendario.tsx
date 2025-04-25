@@ -6,7 +6,7 @@ import interactionPlugin from '@fullcalendar/interaction'; // Permite interaçã
 import { format } from 'date-fns'; // Para formatar datas
 
 const CalendarPage = () => {
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState<any>([]);
 
   useEffect(() => {
     // Requisição para a API para obter os eventos
@@ -20,6 +20,12 @@ const CalendarPage = () => {
         setEvents(formattedEvents);
       })
       .catch((error) => console.error('Erro ao carregar eventos:', error));
+
+    const formattedEvents = [{
+      title: "Teste",
+      date: "2025-04-24" // Formatar a data no formato aceito pelo FullCalendar
+    }]
+    setEvents(formattedEvents);
   }, []);
 
   return (
