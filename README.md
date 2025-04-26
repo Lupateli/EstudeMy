@@ -13,6 +13,8 @@ pnpm dev
 # or
 bun dev
 ```
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

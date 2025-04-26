@@ -92,7 +92,7 @@ const MenuLateral = () => {
                 />
               </div>
             }
-            component={<Link href="/consult-ai" />}
+            component={<Link href="/ConsultAi"/>}
             style={{
               padding: "8px 15px",
               margin: "4px 0",
