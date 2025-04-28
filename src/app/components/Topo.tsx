@@ -5,7 +5,7 @@ import { Navbar, Nav, Container} from 'react-bootstrap';
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/app/components/Logo";
-import {List,Book,BarChart,BookmarkFill,Envelope,BackpackFill,HouseDoor,Person,Gear,ThreeDots} from "react-bootstrap-icons";
+import {List,Book,BarChart,BookmarkFill,Envelope,BackpackFill,HouseDoor,Person,ThreeDots} from "react-bootstrap-icons";
 
 const Topo = () => {
   const [collapsed, setCollapsed] = useState(true);

@@ -51,7 +51,7 @@ type CarouselItemProps = {
 
 function CarouselItem({ item }: CarouselItemProps) {
   return (
-    <div className="bg-white p-4 rounded-3xl shadow-md w-64 text-center">
+    <div className="bg-white p-4 rounded-3xl shadow-md w-64 text-center" >
       <img src={item.image} alt={item.title} className="w-full h-auto object-contain mb-2 rounded-2xl" />
       <h2 className="text-white font-semibold bg-amber-500 rounded">{item.title}</h2>
       <p className="text-sm text-black-500">{item.description}</p>
@@ -93,7 +93,7 @@ function Carousel() {
             return <CarouselItem key={item.id} item={item} />;
         })}
       </div>
-      <button onClick={next} className="text-black px-2 py-5  rounded-full hover:bg-slate-300 rounded">
+      <button onClick={next} className="text-black px-2 py-5  rounded-full hover:bg-slate-300 rounded" >
         <ChevronRightIcon />
       </button>
     </div>
