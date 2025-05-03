@@ -15,7 +15,7 @@ const Topo = () => {
 
   // Dados dos menus
   const sidebarItems = [
-    { icon: <Book size={18} />, label: "Meus Cursos", href: "/pages/meus-cursos" },
+    { icon: <Book size={18} />, label: "Meus Cursos", href: "/pages/meusCursos" },
     { icon: <BarChart size={18} />, label: "Ranking", href: "/pages/ranking" },
     { icon: <BookmarkFill size={18} />, label: "Lições Salvas", href: "/pages/salvas" },
     { icon: <Envelope size={18} />, label: "Caixa de Entrada", href: "/pages/mensagens" },
@@ -33,7 +33,7 @@ const Topo = () => {
     { href: "/pages/calendario", label: "Calendário" },
     { href: "/pages/faleConosco", label: "Fale Conosco" },
     { href: "/pages/faq",  label: "FAQ" },
-    { href: "/pages/login", label: "Sair", variant: "danger" }
+    { href: "/pages/landingPage", label: "Sair", variant: "danger" }
   ];
 
   return (
