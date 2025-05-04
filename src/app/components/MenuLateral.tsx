@@ -20,7 +20,7 @@ const MenuLateral = () => {
     { icon: <Book size={18} />, label: "Meus Cursos", href: "/pages/meusCursos" },
     { icon: <BarChart size={18} />, label: "Ranking", href: "/pages/ranking" },
     { icon: <BookmarkFill size={18} />, label: "Lições Salvas", href: "/pages/salvas" },
-    { icon: <Envelope size={18} />, label: "Caixa de Entrada", href: "/mensagens" },
+    { icon: <Envelope size={18} />, label: "Caixa de Entrada", href: "/pages/mensagens" },
     { icon: <BackpackFill size={18} />, label: "Criar Trilhas", href: "/criar-trilhas" },
   ];
 
