@@ -1,5 +1,4 @@
 import Conta from "@/app/components/Conta";
-import { Nav } from "react-bootstrap";
 import Topo from "@/app/components/Topo";
 
 export default function Home() {
