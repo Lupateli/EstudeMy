@@ -52,6 +52,7 @@ type CarouselItemProps = {
 function CarouselItem({ item }: CarouselItemProps) {
   return (
     <div className="bg-white p-4 rounded-3xl shadow-md w-64 text-center" >
+      <a href="/page"></a>
       <img src={item.image} alt={item.title} className="w-full h-auto object-contain mb-2 rounded-2xl" />
       <h2 className="text-white font-semibold bg-amber-500 rounded">{item.title}</h2>
       <p className="text-sm text-black-500">{item.description}</p>
