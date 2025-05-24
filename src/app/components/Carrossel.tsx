@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 const items = [
   {
@@ -54,7 +55,7 @@ function CarouselItem({ item }: CarouselItemProps) {
     <div className="bg-white p-4 rounded-3xl shadow-md w-64 text-center" >
       <a href="/pages/trilha">lol</a>
       <img src={item.image} alt={item.title} className="w-full h-auto object-contain mb-2 rounded-2xl" />
-      <h2 className="text-white font-semibold bg-amber-500 rounded">{item.title}</h2>
+      <h2 className="text-white font-semibold bg-amber-500 rounded max-h-10 " style={{ fontSize: "clamp(1rem, 2vw, 2rem)" }}>{item.title}</h2>
       <p className="text-sm text-black-500">{item.description}</p>
     </div>
   );
@@ -83,7 +84,7 @@ function Carousel() {
   const next = () => setIndex((index + 1) % items.length);
 
   return (
-    <div className="flex flex-col items-center gap-4 bg-slate-100 p-6 rounded-xl w-5xl max-w-dvh mx-auto ">
+    <button><div className="flex flex-col m-auto items-center gap-4 bg-slate-200 p-4 rounded-xl max-w-5xl">
     <div className="relative flex items-center justify-center gap-4">
       <button onClick={prev} className="text-black px-2 py-5 hover:bg-slate-300 rounded">
         <ChevronLeftIcon />
@@ -107,6 +108,7 @@ function Carousel() {
       ))}
     </div>
   </div>
+  </button>
   );
 }
 

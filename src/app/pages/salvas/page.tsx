@@ -2,7 +2,7 @@ import React from "react";
 import NavbarSuperior from "@/app/components/NavbarSuperior";
 import MenuLateral from "@/app/components/MenuLateral";
 import Footer from "@/app/components/Footer";
-import Carousel from "@/app/components/Corrossel";
+import Carousel from "@/app/components/Carrossel";
 
 export default function PaginaLicoesSalvas() {
   return (

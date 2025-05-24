@@ -1,4 +1,4 @@
-import Carrossel from "@/app/components/Corrossel"
+import Carrossel from "@/app/components/Carrossel"
 import Footer from "@/app/components/Footer"
 import MenuLateral from "@/app/components/MenuLateral"
 import NavbarSuperior from "@/app/components/NavbarSuperior"

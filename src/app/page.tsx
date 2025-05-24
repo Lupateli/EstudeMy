@@ -1,5 +1,5 @@
 import NavbarSuperior2 from "@/app/components/NavbarSuperior";
-import Carrossel from "@/app/components/Corrossel"
+import Carrossel from "@/app/components/Carrossel"
 import Footer from "@/app/components/Footer"
 import Topo from "@/app/components/Topo";
 
