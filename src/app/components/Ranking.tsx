@@ -54,7 +54,7 @@ export default function Ranking() {
         ))}
       </div>
 
-      <button className="mt-8 bg-blue-500 px-6 py-2 rounded-xl font-bold hover:bg-blue-600">
+      <button className="mt-8 bg-blue-500 px-6 m-3 py-2 rounded font-bold hover:bg-blue-600">
         CONTINUAR
       </button>
     </div>
