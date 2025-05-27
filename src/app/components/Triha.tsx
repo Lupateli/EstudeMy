@@ -3,7 +3,7 @@ import React from "react";
 
 const Triha = () => {
   return (
-    <main className="flex flex-col items-center min-h-screen bg-white p-8 relative">
+    <main className="flex flex-col items-center min-h-screen bg-white p-8 relative my-2">
       {/* Unit Header */}
       <div className="bg-blue-400 text-white p-4 rounded-lg mb-8 flex justify-between items-center w-full max-w-md">
         <div>
