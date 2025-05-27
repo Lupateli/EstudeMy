@@ -18,7 +18,7 @@ export default function App() {
   const [tab, setTab] = useState("notifications");
 
   return (
-    <div className="max-w-md mx-auto bg-white min-h-screen p-2 relative">
+    <div className="max-w-md mx-auto bg-white min-h-screen p-2 relative mt-3">
       {/* Tabs */}
       <div className="flex justify-around border-b border-gray-300 mb-2">
         <button

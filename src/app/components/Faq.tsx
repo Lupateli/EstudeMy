@@ -1,6 +1,6 @@
 const Faq = () => {
     return (
-        <div className="max-w-8xl mx-auto p-6 bg-white rounded-lg shadow-md my-20">
+        <div className="max-w-8xl mx-30 p-6 bg-white rounded-lg shadow-lg mb-20 mt-10">
             <div className="flex flex-col gap-lg-4">
             <section >
                 <h2>O que é a plataforma gameficada?</h2>
