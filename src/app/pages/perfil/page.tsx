@@ -6,12 +6,12 @@ export default function PerfilPage() {
   return (
     <>
       <Topo />
-      <main className="main">
+      <main className=" main mx-20 p-5">
         <div className="p-4">
-          <img
+          <img 
             src="/img/guerreiro.png"
             alt="Imagem do personagem Guerreiro"
-            className="card-img"
+            className="card-img flex flex-column"
           />
         </div>
         <div className="character">
