@@ -5,7 +5,7 @@ import { Navbar, Nav, Container} from 'react-bootstrap';
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/app/components/Logo";
-import {List,Book,BarChart,BookmarkFill,Envelope,BackpackFill,HouseDoor,Person,ThreeDots} from "react-bootstrap-icons";
+import {List,Book,BarChart,BookmarkFill,Envelope,BackpackFill,HouseDoor,Person,ThreeDots,Gear} from "react-bootstrap-icons";
 
 const Topo = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -25,7 +25,7 @@ const Topo = () => {
   const navItems = [
     { href: "/pages/menuTrilhas", icon: <HouseDoor size={18} />, label: "Home" },
     { href: "/pages/perfil", icon: <Person size={18} />, label: "Perfil" },
-    /*{ href: "/pages/configuracoes", icon: <Gear size={18} />, label: "Configurações" },*/
+    { href: "/pages/configuracoes", icon: <Gear size={18} />, label: "Configurações" },
   ];
 
   const dropdownItems = [
