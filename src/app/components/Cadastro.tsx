@@ -83,7 +83,7 @@ const Cadastrar = () => {
             onChange={(e) => setConfirmarSenha(e.target.value)}
           />
         </div>
-        <Button type="submit" variant="primary">
+        <Button type="submit" variant="primary" href='/pages/login'>
           Cadastrar
         </Button>
       </form>
