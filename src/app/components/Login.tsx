@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Logo from './Logo';
+import Logo from "@/app/components/Logo";
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -34,7 +34,7 @@ const Login = () => {
 
   return (
     <div className="max-w-2xl min-w-[40rem] mx-auto p-6 bg-white rounded-lg shadow-md my-20">
-      <Logo />
+      <Logo/>
       <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
         <div className="flex flex-col">
           <label className="text-sm text-left"> Email :</label>
