@@ -58,7 +58,7 @@ const Login = () => {
             onChange={(e) => setSenha(e.target.value)}
           />
         </div>
-        <Button type="submit" variant="primary">
+        <Button type="submit" variant="primary" href="/pages/menuTrilhas">
           Login
         </Button>
       </form>
