@@ -125,7 +125,7 @@ const Topo = () => {
                   />
                 </div>
               }
-              component={<Link href="/consult-ai" />}
+              component={<Link href="/pages/consultAi" />}
               style={{ 
                 padding: "8px 15px",
                 color: "white",
