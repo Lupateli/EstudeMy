@@ -1,6 +1,5 @@
-
 import React from "react";
-
+ 
 const Triha = () => {
   return (
     <main className="flex flex-col items-center min-h-screen bg-white p-8 relative my-2">
@@ -14,14 +13,14 @@ const Triha = () => {
           GUIDEBOOK
         </button>
       </div>
-
+ 
       {/* Progress Path */}
       <div className="flex flex-col items-center space-y-6">
         {/* Start Button */}
         <button className="bg-blue-400 text-white p-4 rounded-full shadow-md w-16 h-16 flex items-center justify-center text-sm font-bold">
           START
         </button>
-
+ 
         {/* Locked Steps */}
         <div className="bg-blue-400 w-12 h-12 rounded-full flex items-center justify-center text-2xl">
           ⭐
@@ -39,10 +38,10 @@ const Triha = () => {
           ☆
         </div>
       </div>
-
-
+ 
+ 
     </main>
   );
 }
-
+ 
 export default Triha;
