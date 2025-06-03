@@ -19,7 +19,7 @@ const Topo = () => {
     { icon: <BarChart size={18} />, label: "Ranking", href: "/pages/ranking" },
     { icon: <BookmarkFill size={18} />, label: "Lições Salvas", href: "/pages/salvas" },
     { icon: <Envelope size={18} />, label: "Caixa de Entrada", href: "/pages/mensagens" },
-    { icon: <BackpackFill size={18} />, label: "Criar Trilhas", href: "/pages/criar-trilhas" },
+    { icon: <BackpackFill size={18} />, label: "Criar Trilhas", href: "/pages/criarTrilha" },
   ];
 
   const navItems = [
