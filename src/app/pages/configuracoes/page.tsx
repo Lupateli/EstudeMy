@@ -7,7 +7,7 @@ export default function ConfiguracoesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Topo />
-      <div className="flex flex-1">
+      <div className="flex flex-6">
         <Configuracoes />
       </div>
       <Footer />

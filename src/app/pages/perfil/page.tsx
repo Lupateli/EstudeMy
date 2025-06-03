@@ -29,7 +29,7 @@ export default function PerfilPage() {
             <br />
             FAVORITOS
           </button>
-          <button className="blue-btn">CONQUISTAS</button>
+          <button  className="blue-btn">CONQUISTAS</button>
         </div>
       </main>
       <Footer />
