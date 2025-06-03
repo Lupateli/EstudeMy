@@ -8,7 +8,7 @@ export default function meusCursos() {
       <Topo />
       <div className="flex flex-row w-full h-full">
         <div className="flex-grow pt-3 w-5xl min-w-3xl max-w-5xl mx-auto">
-          <div className="text-3xl p-4 rounded-xl al">Meus Cursos</div>
+          <div className="text-3xl p-4 rounded-xl al">Cursos Favoritos</div>
           <Carrossel />
         </div>
       </div>
