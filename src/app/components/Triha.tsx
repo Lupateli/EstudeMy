@@ -9,8 +9,8 @@ const Triha = () => {
           <h2 className="text-xl font-bold">Unidade 1</h2>
           <p>Form basic sentences, greet people</p>
         </div>
-        <button className="bg-white text-blue-500 font-bold px-4 py-2 rounded">
-          GUIDEBOOK
+       <button className="bg-white text-blue-500 font-bold px-4 py-2 rounded">
+          GUIA
         </button>
       </div>
  
@@ -22,6 +22,7 @@ const Triha = () => {
         </button>
  
         {/* Locked Steps */}
+        
         <div className="bg-blue-400 w-12 h-12 rounded-full flex items-center justify-center text-2xl">
           ⭐
         </div>
