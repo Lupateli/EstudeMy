@@ -2,7 +2,7 @@ import React from 'react';
 const ConsultAi = () => {
   return ( 
     <div>
-      <main className="p-4">
+      <main className="min-h-screen items-center justify-center bg-gray-100 p-4 mt-2 mx-52">
         <section id="sobre" className="mb-6">
           <h2 className="text-xl font-semibold">Quem Somos</h2>
           <p>
@@ -20,13 +20,7 @@ const ConsultAi = () => {
         </section>
       </main>
      
-      <footer id="contato" className="bg-gray-200 py-6 text-center">
-        <h2 className="text-lg font-semibold">Contato</h2>
-        <p>Email: contato@consultai.com</p>
-        <p>Telefone: (11) 1234-5678</p>
-        <p>Endereço: Rua da Inovação, 123 - São Paulo, SP</p>
-        <p className="text-sm mt-4">&copy; 2024 ConsultAi. Todos os direitos reservados.</p>
-      </footer>
+
     </div>
   ); }
   export default ConsultAi;
