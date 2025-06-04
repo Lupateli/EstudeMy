@@ -39,7 +39,7 @@ export default function Trilhas() {
           const isLeft = index % 2 === 0;
 
           const buttonClass = isLocked
-            ? "bg-blue-500 text-gray-400" // Removido cursor-not-allowed
+            ? "bg-blue-500 text-gray-400 cursor-pointer" // Removido cursor-not-allowed
             : "bg-blue-500 text-yellow-300 cursor-pointer";
 
           return (
