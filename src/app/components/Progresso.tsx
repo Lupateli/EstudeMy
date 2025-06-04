@@ -1,13 +1,14 @@
+'use client'
 import Image from "next/image";
 import { Star } from "lucide-react"; // ou use ícones SVG comuns
 
 export default function Progresso() {
   return (
-    <div className="w-[300px] bg-white rounded-xl shadow-md overflow-hidden border">
+    <div className="w-[300px] mx-auto mt-4 bg-white rounded-xl shadow-md overflow-hidden border">
       {/* Imagem do curso */}
       <div className="relative h-[160px]">
         <Image
-          src="/82ec3baf-88ee-4949-bae8-6e7daf0302dc.png" // Coloque a imagem na pasta public/
+          src="/img/ConsultAi.png" // Coloque a imagem na pasta public/
           alt="Imagem do curso"
           layout="fill"
           objectFit="cover"
