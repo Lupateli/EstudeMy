@@ -20,8 +20,8 @@ export default function Trilhas() {
       {/* Cabeçalho com azul igual aos botões */}
       <div className="bg-blue-500 rounded-t-xl px-6 py-4 mb-12 shadow-md text-white w-[90%] max-w-3xl flex justify-between items-center">
         <div>
-          <p className="text-sm font-bold opacity-80">← SEÇÃO 1, UNIDADE 1</p>
-          <h2 className="text-xl font-bold">Faça pedido em um café</h2>
+          <p className="text-sm font-bold opacity-80">SEÇÃO 1, UNIDADE 1</p>
+          <h2 className="text-xl font-bold">Geográfia</h2>
         </div>
         <button className="flex items-center gap-2 border-2 border-white rounded-xl px-3 py-1 text-white font-bold">
           <BookText className="w-4 h-4" />
