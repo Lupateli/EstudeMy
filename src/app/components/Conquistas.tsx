@@ -8,7 +8,7 @@ export default function Conquistas() {
   const placeholderImage = "/e880cc04-498a-4b80-a79e-9cc87ed73f16.png"; // coloque essa imagem na pasta /public
 
   return (
-    <div className="bg-gray-800 text-white p-4 rounded-xl w-[400px] shadow-lg">
+    <div className="bg-gray-800 text-white p-4 rounded-xl w-[400px] mx-auto mt-4 shadow-lg">
       <h2 className="text-sm text-gray-400 uppercase">Conquistas</h2>
       <div className="flex items-center mt-2">
         <div className="w-4 h-4 bg-yellow-400 rounded-full mr-2" />
@@ -29,7 +29,7 @@ export default function Conquistas() {
         {Array.from({ length: 6 }).map((_, index) => (
           <div key={index} className="w-10 h-10 bg-black border border-yellow-400 rounded overflow-hidden">
             <Image
-              src={placeholderImage}
+              src="/img/trofeu.png"
               alt={`Conquista ${index + 1}`}
               width={40}
               height={40}
