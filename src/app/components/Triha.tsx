@@ -58,7 +58,7 @@ export default function Trilhas() {
                 <button
                   disabled={isLocked}
                   aria-disabled={isLocked}
-                  className={`w-20 h-20 rounded-full shadow-xl flex items-center justify-center 
+                  className={`w-20 h-20 rounded-circle shadow-xl flex items-center justify-center 
                     transform active:translate-y-1 active:shadow-inner transition-all duration-100
                     ${buttonClass}`}
                 >
