@@ -24,19 +24,19 @@ const items = [
   },
   {
     id: 4,
-    title: 'Matematica',
+    title: 'Matemática',
     image: 'https://i.imgur.com/9T8QZtG.png',
     description: 'Logaritimo',
   },
   {
     id: 5,
-    title: 'Portugues',
+    title: 'Português',
     image: 'https://i.imgur.com/6z2LgQ2.png',
     description: 'Substantivo',
   },
   {
     id: 6,
-    title: 'Ciencias',
+    title: 'Ciências',
     image: 'https://i.imgur.com/NhZWq1E.png',
     description: 'Biologia',
   },
