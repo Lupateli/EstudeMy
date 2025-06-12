@@ -1,67 +1,82 @@
 "use client";
 
 import CoinRain from "@/app/components/CoinRain";
-import NavbarSuperiorLP from "@/app/components/NavbarSuperiorLP";
 import { Jaro } from "next/font/google";
 import { Button } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 const jaro = Jaro({
   subsets: ["latin"],
   weight: "400",
 });
 
+const tooltips = [
+  { icon: "🎮", text: "Estude jogando!", color: "#9CC5EB" },
+  { icon: "🏆", text: "Suba no ranking!", color: "#f9bc60" },
+  { icon: "💎", text: "Ganhe recompensas!", color: "#7f5af0" },
+];
+
 export default function LandingPage() {
   return (
-    <main className="h-screen flex flex-col text-white relative overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#0158a5]">
-      {/* Coin rain animado */}
+    <main
+      className="h-screen flex flex-col text-white relative overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: `url('/img/background-image.png')` }}
+    >
       <CoinRain />
 
-      {/* Navbar 
-      <div className="shrink-0 relative z-20">
-        <NavbarSuperiorLP />
-      </div>*/}
+      {/* BANNERS MAIS VISÍVEIS */}
+      <div className="fixed top-1/2 left-4 z-30 flex flex-col gap-6 -translate-y-1/2">
+        {tooltips.map(({ icon, text, color }, index) => (
+          <div className="group relative flex items-center" key={index}>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="bg-[#163043cc] backdrop-blur-md border-2 p-4 rounded-xl shadow-md cursor-pointer"
+              style={{
+                borderColor: color,
+                boxShadow: `0 0 12px ${color}`,
+              }}
+            >
+              <span className="text-3xl">{icon}</span>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              whileHover={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute left-16 bg-[#9CC5EB] text-[#163043] px-4 py-2 rounded-md whitespace-nowrap text-md font-bold shadow-lg"
+            >
+              {text}
+            </motion.div>
+          </div>
+        ))}
+      </div>
 
-      {/* Conteúdo principal */}
+      {/* CONTEÚDO CENTRAL */}
       <div className="flex-grow flex flex-col justify-center items-center px-4 py-6 overflow-hidden relative z-10">
-        {/* Hero */}
-        <section className="text-center max-w-3xl mb-10">
-          <div className="mb-4">
+        <section className="text-center max-w-3xl mb-12">
+          <div className="mb-6">
             <img
               src="/EstudeMyLogo.svg"
               alt="Logo Estude.My"
-              className="m-auto h-30"
+              className="m-auto h-32 drop-shadow-[4px_4px_0_#000]"
             />
           </div>
-         {/* <h2 className="text-2xl md:text-4xl mb-6 text-[#ff0000] ">
-            Transforme seus estudos em uma aventura!
-          </h2>
-          <p className="text-lg md:text-xl mb-6 text-white">
-            Com nossa plataforma gamificada, aprender se torna divertido e recompensador.
-          </p>*/}
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button className="bg-[#ff0000] text-white px-10 py-3 border-4 border-white shadow-[4px_4px_0_0_#000] rounded-none font-bold text-lg transition-transform hover:translate-x-1 hover:translate-y-1 hover:shadow-none" href="/pages/cadastro">
+          {/* BOTÕES GRANDES COM DESTAQUE */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mt-10">
+            <motion.a
+              href="/pages/cadastro"
+              whileHover={{ scale: 1.05 }}
+              className="bg-[#2b9348] text-white px-8 py-4 border-4 border-[#1b1b1b] shadow-[8px_8px_0_0_#000000] rounded-xl font-extrabold text-1xl transition-transform"
+            >
               Começar agora!
-            </Button>
-            <Button className="bg-[#ffe600] text-black px-10 py-3 border-4 border-white shadow-[4px_4px_0_0_#000] rounded-none font-bold text-lg transition-transform hover:translate-x-1 hover:translate-y-1 hover:shadow-none" href="/pages/login">
+            </motion.a>
+            <motion.a
+              href="/pages/login"
+              whileHover={{ scale: 1.05 }}
+              className="bg-[#f9bc60] text-black px-8 py-4 border-4 border-[#1b1b1b] shadow-[8px_8px_0_0_#000000] rounded-xl font-extrabold text-1xl transition-transform"
+            >
               Entrar
-            </Button>
-          </div>
-        </section>
-
-        {/* Benefícios */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-3 w-full max-w-5xl text-sm md:text-base">
-          <div className="bg-[#155dfc] text-white p-6 border-4 border-[#000000] shadow-[4px_4px_0_0_#f2cb07] rounded-md font-semibold transition-transform hover:scale-105 hover:shadow-lg">
-            <h3 className={`${jaro.className} text-3xl md:text-4xl mb-4`}>Estude Jogando 🎮</h3>
-            <p>Transforme seus estudos em uma jornada divertida, com desafios e recompensas.</p>
-          </div>
-          <div className="bg-[#155dfc] text-white p-6 border-4 border-[#000000] shadow-[4px_4px_0_0_#f24c27] rounded-md font-semibold transition-transform hover:scale-105 hover:shadow-lg">
-            <h3 className={`${jaro.className} text-3xl md:text-4xl mb-4`}>Suba no Ranking 🏆</h3>
-            <p>Conquiste seu lugar entre os melhores e evolua junto com a comunidade.</p>
-          </div>
-          <div className="bg-[#155dfc] text-white p-6 border-4 border-[#000000] shadow-[4px_4px_0_0_#ff00ff] rounded-md font-semibold transition-transform hover:scale-105 hover:shadow-lg">
-            <h3 className={`${jaro.className} text-3xl md:text-4xl mb-4`}>Desafie Records 💎</h3>
-            <p>Complete trilhas de conhecimento e ganhe recompensas exclusivas.</p>
+            </motion.a>
           </div>
         </section>
       </div>
