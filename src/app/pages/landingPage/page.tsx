@@ -7,64 +7,64 @@ import { Button } from "react-bootstrap";
 
 const jaro = Jaro({
   subsets: ["latin"],
-  weight: "400", // Jaro só tem um peso
+  weight: "400",
 });
-
-
-
 
 export default function LandingPage() {
   return (
-    <main className="h-screen flex flex-col bg-white text-gray-900 relative overflow-hidden">
+    <main className="h-screen flex flex-col text-white relative overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#155dfc]">
       {/* Coin rain animado */}
       <CoinRain />
 
-      {/* Navbar */}
+      {/* Navbar 
       <div className="shrink-0 relative z-20">
-      <NavbarSuperiorLP />
-      </div>
+        <NavbarSuperiorLP />
+      </div>*/}
 
-      {/* Conteúdo principal (Hero + Benefícios) */}
-      <div className="flex-grow flex flex-col justify-center items-center px-4 py-6 overflow-hidden">
+      {/* Conteúdo principal */}
+      <div className="flex-grow flex flex-col justify-center items-center px-4 py-6 overflow-hidden relative z-10">
         {/* Hero */}
-        
         <section className="text-center max-w-3xl mb-10">
-          <h1 className={`${jaro.className} text-3xl md:text-5xl mb-4 text-blue-600`}>
-          Transforme seus estudos em uma aventura!
-          </h1>
-          <p className="text-lg md:text-xl mb-6">
+          <div className="mb-4">
+            <img
+              src="/EstudeMyLogo.svg"
+              alt="Logo Estude.My"
+              className="m-auto h-30"
+            />
+          </div>
+          <h2 className="text-2xl md:text-4xl mb-6 text-[#ff0000] drop-shadow-[0_0_10px_#FF006E]">
+            Transforme seus estudos em uma aventura!
+          </h2>
+          <p className="text-lg md:text-xl mb-6 text-white">
             Com nossa plataforma gamificada, aprender se torna divertido e recompensador.
           </p>
-           
+
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button className="bg-blue-600 text-white px-20 py-3 border-4 w-auto min-w-2xs border-black shadow-[4px_4px_0_0_#000] rounded-none font-bold transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none" href="/pages/cadastro">
-            Começar agora!
+            <Button className="bg-[#ff0000] text-white px-10 py-3 border-4 border-white shadow-[4px_4px_0_0_#000] rounded-none font-bold text-lg transition-transform hover:translate-x-1 hover:translate-y-1 hover:shadow-none" href="/pages/cadastro">
+              Começar agora!
             </Button>
-            
-            <Button className="bg-blue-600 text-white px-20 py-3 border-4 w-auto min-w-2xs border-black shadow-[4px_4px_0_0_#000] rounded-none font-bold transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none" href="/pages/login">
-               Entrar
+            <Button className="bg-[#00FFFF] text-black px-10 py-3 border-4 border-white shadow-[4px_4px_0_0_#000] rounded-none font-bold text-lg transition-transform hover:translate-x-1 hover:translate-y-1 hover:shadow-none" href="/pages/login">
+              Entrar
             </Button>
           </div>
-
-       
         </section>
 
-        {/* Benefícios compactados */}
+        {/* Benefícios */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl text-sm md:text-base">
-  <div className="bg-green-600 text-white p-4 border-4 border-black shadow-[4px_4px_0_0_#000] rounded-none font-semibold transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none">
-    <h3 className={`${jaro.className} text-3xl md:text-5xl mb-4`}>Estude Jogando 🎮</h3>
-    <p>Transforme seus estudos em uma jornada divertida, com desafios e recompensas.</p>
-  </div>
-  <div className="bg-yellow-400 text-black p-4 border-4 border-black shadow-[4px_4px_0_0_#000] rounded-none font-semibold transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none">
-    <h3 className={`${jaro.className} text-3xl md:text-5xl mb-4`}>Suba no Ranking 🏆</h3>
-    <p>Conquiste seu lugar entre os melhores e evolua junto com a comunidade.</p>
-  </div>
-  <div className="bg-pink-500 text-white p-4 border-4 border-black shadow-[4px_4px_0_0_#000] rounded-none font-semibold transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none">
-    <h3 className={`${jaro.className} text-3xl md:text-5xl mb-4`}>Desafie Records 💎</h3>
-    <p>Complete trilhas de conhecimento e ganhe recompensas exclusivas.</p>
-  </div>
-</section>
+          <div className="bg-[#5f90fc] text-white p-6 border-4 border-[#00FFFF] shadow-[4px_4px_0_0_#FF006E] rounded-md font-semibold transition-transform hover:scale-105 hover:shadow-lg">
+            <h3 className={`${jaro.className} text-3xl md:text-4xl mb-4`}>Estude Jogando 🎮</h3>
+            <p>Transforme seus estudos em uma jornada divertida, com desafios e recompensas.</p>
+          </div>
+          <div className="bg-[#155dfc] text-white p-6 border-4 border-[#ff0000] shadow-[4px_4px_0_0_#00FFFF] rounded-md font-semibold transition-transform hover:scale-105 hover:shadow-lg">
+            <h3 className={`${jaro.className} text-3xl md:text-4xl mb-4`}>Suba no Ranking 🏆</h3>
+            <p>Conquiste seu lugar entre os melhores e evolua junto com a comunidade.</p>
+          </div>
+          <div className="bg-[#155dfc] text-white p-6 border-4 border-[#0a7307] shadow-[4px_4px_0_0_#FF006E] rounded-md font-semibold transition-transform hover:scale-105 hover:shadow-lg">
+            <h3 className={`${jaro.className} text-3xl md:text-4xl mb-4`}>Desafie Records 💎</h3>
+            <p>Complete trilhas de conhecimento e ganhe recompensas exclusivas.</p>
+          </div>
+        </section>
       </div>
-      </main>
+    </main>
   );
 }
