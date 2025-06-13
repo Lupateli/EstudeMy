@@ -45,7 +45,7 @@ const Cadastrar = () => {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center bg-gray-50 px-4 h-screen flex flex-col relative overflow-hidden bg-cover bg-center"
+      className="min-h-screen flex items-center justify-center bg-gray-50 px-4 h-screen flex-col relative overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url('/img/background-image-login-register.png')`,
       }}

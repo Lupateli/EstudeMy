@@ -18,17 +18,17 @@ export default function Header() {
         </div>
         <ul className="item-menu-central">
           <li>
-            <Link href="/main_page">
+            <Link href="/main_page" legacyBehavior>
               <span>🏠</span> Home
             </Link>
           </li>
           <li>
-            <Link href="/pages/index_perfil">
+            <Link href="/pages/index_perfil" legacyBehavior>
               <span>👤</span> Perfil
             </Link>
           </li>
           <li>
-            <Link href="/config">
+            <Link href="/config" legacyBehavior>
               <span>⚙️</span> Configurações
             </Link>
           </li>
