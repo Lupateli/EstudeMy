@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function PerfilPage() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-gray-100">
       <Topo />
       <main className="main mx-20 p-5">
         <div className="p-4">
@@ -30,6 +30,6 @@ export default function PerfilPage() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

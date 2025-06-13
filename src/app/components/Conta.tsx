@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import React from "react";
+import { Button } from "react-bootstrap";
 
 export default function MinhaConta() {
   const user = {
@@ -10,7 +11,6 @@ export default function MinhaConta() {
   };
 
   const handleEditar = () => alert("Editar informações");
-  const handleCriarTrilha = () => alert("Criar trilha");
   const handleAlterarSenha = () => alert("Alterar senha");
   const handleExcluirConta = () => alert("Conta excluída");
   const handleSair = () => alert("Você saiu da conta");
@@ -20,12 +20,14 @@ export default function MinhaConta() {
       <div className="bg-white p-6 rounded shadow-md w-full max-w-md">
         <div className="text-center mb-4">
           <h2 className="text-2xl font-bold">Minha Conta</h2>
-          <button
+          <Button
+            variant="danger"
             onClick={handleSair}
             className="bg-red-500 text-white px-4 py-1 mt-2 rounded hover:bg-red-600"
+            href="/"
           >
             Sair
-          </button>
+          </Button>
         </div>
 
         {/* Informações Pessoais */}
@@ -45,19 +47,19 @@ export default function MinhaConta() {
             <span className="font-medium">Telefone:</span>
             <span>{user.telefone}</span>
           </div>
-          <div className="flex gap-2">
-            <button
+          <div className="flex justify-between p-4 border-t bg-white sticky bottom-0">
+            <Button
               onClick={handleEditar}
-              className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700"
+              className="bg-blue-600 text-white px-6 py-2 rounded transition"
             >
               Editar Informações
-            </button>
-            <button
-              onClick={handleCriarTrilha}
-              className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700"
+            </Button>
+            <Button
+              className="bg-blue-600 text-white px-6 py-2 rounded transition"
+              href="/pages/criarTrilha"
             >
               Criar Trilha
-            </button>
+            </Button>
           </div>
         </div>
 

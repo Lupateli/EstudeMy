@@ -81,7 +81,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
             />
             Receber notificações
           </label>
-          <label className="block">
+          <label className="block ml-2 mt-6">
             <input
               type="checkbox"
               name="publicProfile"

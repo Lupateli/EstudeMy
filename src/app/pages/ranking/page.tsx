@@ -11,6 +11,7 @@ export default function RankingPage() {
         <div className="flex-grow pt-3 w-5xl min-w-3xl max-w-5xl mx-auto">
           <div className="text-3xl p-4 rounded-xl">Ranking</div>
           <Ranking />
+          
         </div>
       </div>
       <Footer />

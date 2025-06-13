@@ -1,6 +1,6 @@
 export default function CriarTrilha() {
   return (
-    <div className="min-h-screen items-center mx-auto bg-white p-6">
+    <div className=" items-center mx-auto bg-white p-6 mt-3">
       <form className="w-full max-w-2xl space-y-5">
         <h1 className="text-3xl font-bold">
           <span className="text-blue-600">Criar nova</span>{" "}

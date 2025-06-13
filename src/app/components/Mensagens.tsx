@@ -48,9 +48,9 @@ export default function App() {
               className="bg-gray-100 p-3 rounded shadow flex items-start gap-3"
             >
               <img
-                src="https://placekitten.com/50/50"
+                src= '/img/personagem.png '
                 alt="avatar"
-                className="rounded-full w-10 h-10"
+                className="rounded-full w-10 h-10 "
               />
               <div className="flex-1">
                 <div className="font-bold">João</div>

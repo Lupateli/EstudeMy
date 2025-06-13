@@ -37,7 +37,7 @@ const items = [
   {
     id: 6,
     title: 'Ciências',
-    image: 'https://i.imgur.com/NhZWq1E.png',
+    image: 'https://i.imgur.com/6z2LgQ2.png',
     description: 'Biologia',
   },
 ];
@@ -57,7 +57,7 @@ function CarouselItem({ item }: CarouselItemProps) {
     <Link href={`/pages/trilha?id=${item.id}`} passHref legacyBehavior>
       <div className="bg-white p-4 rounded-3xl shadow-md w-64 text-center cursor-pointer hover:scale-105 transition-transform">
         <img src={item.image} alt={item.title} className="w-full h-auto object-contain mb-2 rounded-2xl" />
-        <h2 className="text-white font-semibold bg-amber-500 rounded max-h-10" style={{ fontSize: "clamp(1rem, 2vw, 2rem)" }}>
+        <h2 className="text-white font-semibold bg-amber-500 rounded max-h-20 px-2 break-words overflow-hidden leading-tight" style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
           {item.title}
         </h2>
         <p className="text-sm text-black-500">{item.description}</p>
