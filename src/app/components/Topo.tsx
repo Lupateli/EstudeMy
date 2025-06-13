@@ -203,7 +203,7 @@ const Topo = () => {
               <Nav as="ul" className="item-menu-central">
                 {navItems.map((item, index) => (
                   <Nav.Item as="li" key={index}>
-                    <Link href={item.href}>
+                    <Link href={item.href} passHref legacyBehavior>
                       <Nav.Link className="d-flex align-items-center">
                         {React.cloneElement(item.icon, { className: "me-1" })}
                         {item.label}
