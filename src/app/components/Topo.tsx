@@ -1,11 +1,22 @@
 "use client";
 import React, { useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
-import { Navbar, Nav, Container} from 'react-bootstrap';
+import { Navbar, Nav, Container } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/app/components/Logo";
-import {List,Book,BarChart,BookmarkFill,Envelope,BackpackFill,HouseDoor,Person,ThreeDots,Gear} from "react-bootstrap-icons";
+import {
+  List,
+  Book,
+  BarChart,
+  BookmarkFill,
+  Envelope,
+  BackpackFill,
+  HouseDoor,
+  Person,
+  ThreeDots,
+  Gear,
+} from "react-bootstrap-icons";
 
 const Topo = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -15,25 +26,49 @@ const Topo = () => {
 
   // Dados dos menus
   const sidebarItems = [
-    { icon: <Book size={18} />, label: "Meus Cursos", href: "/pages/meusCursos" },
+    {
+      icon: <Book size={18} />,
+      label: "Meus Cursos",
+      href: "/pages/meusCursos",
+    },
     { icon: <BarChart size={18} />, label: "Ranking", href: "/pages/ranking" },
-    { icon: <BookmarkFill size={18} />, label: "Lições Salvas", href: "/pages/salvas" },
-    { icon: <Envelope size={18} />, label: "Caixa de Entrada", href: "/pages/mensagens" },
-    { icon: <BackpackFill size={18} />, label: "Criar Trilhas", href: "/pages/criarTrilha" },
+    {
+      icon: <BookmarkFill size={18} />,
+      label: "Lições Salvas",
+      href: "/pages/salvas",
+    },
+    {
+      icon: <Envelope size={18} />,
+      label: "Caixa de Entrada",
+      href: "/pages/mensagens",
+    },
+    {
+      icon: <BackpackFill size={18} />,
+      label: "Criar Trilhas",
+      href: "/pages/criarTrilha",
+    },
   ];
 
   const navItems = [
-    { href: "/pages/menuTrilhas", icon: <HouseDoor size={18} />, label: "Home" },
+    {
+      href: "/pages/menuTrilhas",
+      icon: <HouseDoor size={18} />,
+      label: "Home",
+    },
     { href: "/pages/perfil", icon: <Person size={18} />, label: "Perfil" },
-    { href: "/pages/configuracoes", icon: <Gear size={18} />, label: "Configurações" },
+    {
+      href: "/pages/configuracoes",
+      icon: <Gear size={18} />,
+      label: "Configurações",
+    },
   ];
 
   const dropdownItems = [
     { href: "/pages/conta", label: "Conta" },
     { href: "/pages/calendario", label: "Calendário" },
     { href: "/pages/faleConosco", label: "Fale Conosco" },
-    { href: "/pages/faq",  label: "FAQ" },
-    { href: "/pages/landingPage", label: "Sair", variant: "danger" }
+    { href: "/pages/faq", label: "FAQ" },
+    { href: "/", label: "Sair", variant: "danger" },
   ];
 
   return (
@@ -58,8 +93,8 @@ const Topo = () => {
             "& ul": {
               height: "100%",
               overflow: "hidden",
-            }
-          }
+            },
+          },
         }}
       >
         <Menu
@@ -77,7 +112,7 @@ const Topo = () => {
           <MenuItem
             icon={<List className="text-white" size={20} />}
             onClick={() => setCollapsed(!collapsed)}
-            style={{ 
+            style={{
               textAlign: "center",
               padding: "10px 0",
               color: "white",
@@ -88,17 +123,19 @@ const Topo = () => {
           </MenuItem>
 
           {/* Itens da sidebar */}
-          <div style={{
-            height: "calc(100vh - 120px)",
-            overflowY: "auto",
-            scrollbarWidth: "none",
-          }}>
+          <div
+            style={{
+              height: "calc(100vh - 120px)",
+              overflowY: "auto",
+              scrollbarWidth: "none",
+            }}
+          >
             {sidebarItems.map((item, index) => (
               <MenuItem
                 key={index}
                 icon={<div className="text-white">{item.icon}</div>}
                 component={<Link href={item.href} />}
-                style={{ 
+                style={{
                   padding: "8px 15px",
                   color: "white",
                 }}
@@ -107,12 +144,14 @@ const Topo = () => {
               </MenuItem>
             ))}
           </div>
-          <div style={{
-            position: "absolute",
-            bottom: 0,
-            width: "100%",
-            backgroundColor: "#007aff",
-          }}>
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              width: "100%",
+              backgroundColor: "#007aff",
+            }}
+          >
             <MenuItem
               icon={
                 <div className="w-6 h-6 relative">
@@ -126,7 +165,7 @@ const Topo = () => {
                 </div>
               }
               component={<Link href="/pages/consultAi" />}
-              style={{ 
+              style={{
                 padding: "8px 15px",
                 color: "white",
               }}
@@ -135,13 +174,15 @@ const Topo = () => {
             </MenuItem>
           </div>
         </Menu>
-            </Sidebar>
+      </Sidebar>
 
-      <div style={{ 
-        marginLeft: collapsed ? "80px" : "250px",
-        transition: "margin-left 0.3s",
-        width: "100%",
-      }}>
+      <div
+        style={{
+          marginLeft: collapsed ? "80px" : "250px",
+          transition: "margin-left 0.3s",
+          width: "100%",
+        }}
+      >
         <Navbar expand="lg" className="menu-central">
           <Container fluid className="px-0">
             <Link href="/" passHref legacyBehavior>
@@ -150,8 +191,8 @@ const Topo = () => {
               </Navbar.Brand>
             </Link>
 
-            <Navbar.Toggle 
-              aria-controls="top-navbar" 
+            <Navbar.Toggle
+              aria-controls="top-navbar"
               onClick={() => setToggled(!toggled)}
               className="border-0 me-3"
             >
@@ -171,8 +212,8 @@ const Topo = () => {
                   </Nav.Item>
                 ))}
 
-                    <Nav.Item as="li" className="dropdown-container">
-                  <div 
+                <Nav.Item as="li" className="dropdown-container">
+                  <div
                     className="dropdown-toggle"
                     onMouseEnter={() => setShowDropdown(true)}
                     onMouseLeave={() => setShowDropdown(false)}
@@ -181,14 +222,16 @@ const Topo = () => {
                       <ThreeDots className="me-2" />
                       Mais
                     </div>
-                    
+
                     {showDropdown && (
                       <div className="custom-dropdown">
                         {dropdownItems.map((item, index) => (
-                          <Link 
-                            href={item.href} 
+                          <Link
+                            href={item.href}
                             key={index}
-                            className={`dropdown-item ${item.variant === 'danger' ? 'text-danger' : ''}`}
+                            className={`dropdown-item ${
+                              item.variant === "danger" ? "text-danger" : ""
+                            }`}
                           >
                             {item.label}
                           </Link>

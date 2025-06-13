@@ -39,7 +39,9 @@ const Esquecisenha = () => {
   return (
     <div
       className="min-h-screen flex items-center justify-center bg-gray-50 px-4 h-screen flex flex-col relative overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url('/img/background-image.png')` }}
+      style={{
+        backgroundImage: `url('/img/background-image-login-register.png')`,
+      }}
     >
       <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
         <Logo />
@@ -65,7 +67,7 @@ const Esquecisenha = () => {
 
           <div className="flex flex-col gap-2">
             <Button
-            variant="primary"
+              variant="primary"
               type="submit"
               className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
             >
