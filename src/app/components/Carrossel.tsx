@@ -1,108 +1,98 @@
-'use client'
-import { useState } from 'react';
-import Link from 'next/link';
-import { ChevronRightIcon } from 'lucide-react';
+"use client";
+
+import Link from "next/link";
+import { ChevronRightIcon, ChevronLeftIcon } from "lucide-react";
+import { useRef } from "react";
 
 const items = [
   {
     id: 1,
-    title: 'Geografia',
-    image: 'https://i.imgur.com/9T8QZtG.png',
-    description: 'Paises americanos',
+    title: "Geografia",
+    image: "https://i.imgur.com/9T8QZtG.png",
+    description: "Paises americanos",
   },
   {
     id: 2,
-    title: 'História',
-    image: 'https://i.imgur.com/6z2LgQ2.png',
-    description: 'Nosso país',
+    title: "História",
+    image: "https://i.imgur.com/6z2LgQ2.png",
+    description: "Nosso país",
   },
   {
     id: 3,
-    title: 'Banco de dados',
-    image: 'https://i.imgur.com/NhZWq1E.png',
-    description: 'Banco de dados relacional',
+    title: "Banco de dados",
+    image: "https://i.imgur.com/NhZWq1E.png",
+    description: "Banco de dados relacional",
   },
   {
     id: 4,
-    title: 'Matemática',
-    image: 'https://i.imgur.com/9T8QZtG.png',
-    description: 'Logaritimo',
+    title: "Matemática",
+    image: "https://i.imgur.com/9T8QZtG.png",
+    description: "Logaritmo",
   },
   {
     id: 5,
-    title: 'Português',
-    image: 'https://i.imgur.com/6z2LgQ2.png',
-    description: 'Substantivo',
+    title: "Português",
+    image: "https://i.imgur.com/6z2LgQ2.png",
+    description: "Substantivo",
   },
   {
     id: 6,
-    title: 'Ciências',
-    image: 'https://i.imgur.com/6z2LgQ2.png',
-    description: 'Biologia',
+    title: "Ciências",
+    image: "https://i.imgur.com/6z2LgQ2.png",
+    description: "Biologia",
   },
 ];
 
-
-type CarouselItemProps = {
-  item: {
-    id: number;
-    title: string;
-    image: string;
-    description: string;
-  };
-};
-
-function CarouselItem({ item }: CarouselItemProps) {
+function CarouselItem({ item }: { item: (typeof items)[0] }) {
   return (
-    <Link href={`/pages/trilha?id=${item.id}`} passHref legacyBehavior>
-      <div className="bg-white p-4 rounded-3xl shadow-md w-64 text-center cursor-pointer hover:scale-105 transition-transform">
-        <img src={item.image} alt={item.title} className="w-full h-auto object-contain mb-2 rounded-2xl" />
-        <h2 className="text-white font-semibold bg-amber-500 rounded max-h-20 px-2 break-words overflow-hidden leading-tight" style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
+    <Link href={`/pages/trilha?id=${item.id}`}>
+      <div className="bg-white p-4 rounded-3xl shadow-md text-center hover:scale-105 transition-transform min-w-[220px] sm:min-w-[240px] md:min-w-[260px] lg:min-w-[280px] max-w-[90vw] flex-shrink-0">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-full h-auto object-contain mb-2 rounded-2xl"
+        />
+        <h2 className="text-white font-semibold bg-amber-500 rounded px-2 py-1 text-sm md:text-base truncate">
           {item.title}
         </h2>
-        <p className="text-sm text-black-500">{item.description}</p>
+        <p className="text-sm text-black-500 mt-1">{item.description}</p>
       </div>
     </Link>
   );
 }
 
-function ChevronLeftIcon() {
-    return (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-      </svg>
-    );
-  }
-
 function Carousel() {
-  const [index, setIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-  const prev = () => setIndex((index - 1 + items.length) % items.length);
-  const next = () => setIndex((index + 1) % items.length);
+  const scroll = (offset: number) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: offset, behavior: "smooth" });
+    }
+  };
 
   return (
-    <div className="flex flex-col m-auto items-center gap-4 bg-slate-200 p-4 rounded-xl max-w-5xl">
-      <div className="relative flex items-center justify-center gap-4">
-        <button onClick={prev} className="text-black px-2 py-5 hover:bg-slate-300 rounded">
-          <ChevronLeftIcon />
+    <div className="flex flex-col items-center gap-4 bg-slate-200 p-4 rounded-xl w-full max-w-screen-xl mx-auto">
+      <div className="flex items-center gap-2 w-full">
+        <button
+          onClick={() => scroll(-300)}
+          className="p-2 hover:bg-slate-300 rounded-full"
+        >
+          <ChevronLeftIcon className="w-6 h-6" />
         </button>
-        <div className="flex gap-4 overflow-hidden">
-          {[0, 1, 2].map(i => {
-            const item = items[(index + i) % items.length];
-            return <CarouselItem key={item.id} item={item} />;
-          })}
+        <div
+          ref={scrollRef}
+          className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth w-full py-2"
+        >
+          {items.map((item) => (
+            <CarouselItem key={item.id} item={item} />
+          ))}
         </div>
-        <button onClick={next} className="text-black px-2 py-5 rounded-full hover:bg-slate-300 rounded">
-          <ChevronRightIcon />
+        <button
+          onClick={() => scroll(300)}
+          className="p-2 hover:bg-slate-300 rounded-full"
+        >
+          <ChevronRightIcon className="w-6 h-6" />
         </button>
-      </div>
-      <div className="flex gap-2">
-        {items.map((_, i) => (
-          <div
-            key={i}
-            className={`w-3 h-3 rounded-full ${i === index ? 'bg-white' : 'bg-gray-400'}`}
-          />
-        ))}
       </div>
     </div>
   );

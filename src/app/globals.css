@@ -53,8 +53,7 @@
       background-color: #f8f9fa;
       text-decoration: none;
     }
-  
-    /* Melhora a experiência em mobile */
+
     @media (max-width: 991.98px) {
       .dropdown-container {
         position: static;
@@ -65,3 +64,11 @@
         border: none;
         box-shadow: none;
       } }
+
+            .no-scrollbar::-webkit-scrollbar {
+              display: none;
+            }
+      
+            .no-scrollbar {
+              -ms-overflow-style: none;
+              scrollbar-width: none;     }
