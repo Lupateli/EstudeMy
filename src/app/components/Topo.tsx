@@ -64,7 +64,7 @@ const Topo = () => {
 
   const navItems = [
     {
-      href: "/pages/menuTrilhas",
+      href: "/pages/home",
       icon: <HouseDoor size={18} />,
       label: "Home",
     },
@@ -91,24 +91,6 @@ const Topo = () => {
     }
   };
 
-  // Calcular margem do logo baseado no estado da sidebar
-  const getLogoMargin = () => {
-    if (isMobile) {
-      return sidebarToggled ? "320px" : "50px";
-    } else {
-      return collapsed ? "20px" : "300px";
-    }
-  };
-
-  // Calcular margem do conteúdo principal
-  const getMainContentMargin = () => {
-    if (isMobile) {
-      return "0px";
-    } else {
-      return collapsed ? "60px" : "280px";
-    }
-  };
-
   return (
     <div className="flex">
       {/* Botão da Sidebar para Mobile */}
@@ -117,20 +99,24 @@ const Topo = () => {
           onClick={() => setSidebarToggled(!sidebarToggled)}
           style={{
             position: "fixed",
-            top: "10px",
-            left: "10px",
+            top: "8px",
+            left: "8px",
             zIndex: 1100,
-            background: "#007aff",
+            background: "#00a2ff",
             border: "none",
-            borderRadius: "8px",
-            padding: "8px",
+            borderRadius: "6px",
+            padding: "6px 8px",
             color: "white",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
-            transition: "all 0.3s ease-in-out",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
+            transition: "margin-left 0.3s",
+            minHeight: "32px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
           aria-label="Toggle Sidebar"
         >
-          <List size={20} />
+          <List size={16} />
         </button>
       )}
 
@@ -154,10 +140,9 @@ const Topo = () => {
       <Sidebar
         collapsed={isMobile ? false : collapsed}
         toggled={false}
-        breakPoint="never"
         onMouseEnter={() => !isMobile && setCollapsed(false)}
         onMouseLeave={() => !isMobile && setCollapsed(true)}
-        width={isMobile ? "280px" : collapsed ? "60px" : "280px"}
+        width={isMobile ? "280px" : "280px"}
         rootStyles={{
           height: "100vh",
           position: "fixed",
@@ -166,7 +151,7 @@ const Topo = () => {
           overflow: "hidden",
           transform:
             isMobile && !sidebarToggled ? "translateX(-100%)" : "translateX(0)",
-          transition: "transform 0.3s ease-in-out, width 0.3s ease-in-out",
+          transition: "transform margin-left 0.3s",
           "& > div": {
             backgroundColor: "#007aff",
             overflow: "hidden !important",
@@ -206,7 +191,7 @@ const Topo = () => {
             }}
           >
             {(!collapsed || isMobile) && (
-              <span className="text-white">MENU</span>
+              <span className="text-white">{isMobile ? "MENU" : "MENU"}</span>
             )}
           </MenuItem>
 
@@ -271,23 +256,46 @@ const Topo = () => {
       {/* Main Content */}
       <div
         style={{
-          marginLeft: getMainContentMargin(),
-          transition: "margin-left 0.3s ease-in-out",
+          marginLeft: isMobile ? "0px" : collapsed ? "0px" : "00px",
+          transition: "margin-left 0.3s",
           width: "100%",
         }}
       >
-        <Navbar expand="lg" className="menu-central">
-          <Container fluid className="px-0">
+        <Navbar
+          expand="lg"
+          className="menu-central"
+          style={{
+            minHeight: isMobile ? "48px" : "auto",
+            padding: isMobile ? "4px 0" : "8px 0",
+          }}
+        >
+          <Container
+            fluid
+            className="px-0"
+            style={{
+              minHeight: isMobile ? "40px" : "auto",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <Link href="/" passHref legacyBehavior>
               <div
                 style={{
-                  marginLeft: getLogoMargin(),
-                  transition: "margin-left 0.3s ease-in-out",
+                  marginLeft: isMobile ? "40px" : "80px",
+                  transition: "margin-left 0.3s",
+                  display: "flex",
+                  alignItems: "center",
+                  height: isMobile ? "32px" : "auto",
                 }}
               >
-                <Navbar.Brand className="logo">
+                <div
+                  style={{
+                    transform: isMobile ? "scale(0.8)" : "scale(1)",
+                    transformOrigin: "left center",
+                  }}
+                >
                   <Logo />
-                </Navbar.Brand>
+                </div>
               </div>
             </Link>
 
@@ -296,20 +304,38 @@ const Topo = () => {
               aria-controls="top-navbar"
               onClick={() => setNavbarToggled(!navbarToggled)}
               className="border-0 me-3"
+              style={{
+                padding: isMobile ? "2px 4px" : "4px 8px",
+                fontSize: isMobile ? "0.9rem" : "1rem",
+              }}
             >
               <span className="navbar-toggler-icon"></span>
             </Navbar.Toggle>
 
             <Navbar.Collapse id="top-navbar" className="justify-content-end">
-              <Nav as="ul" className="item-menu-central">
+              <Nav
+                as="ul"
+                className="item-menu-central"
+                style={{
+                  alignItems: "center",
+                }}
+              >
                 {navItems.map((item, index) => (
                   <Nav.Item as="li" key={index}>
                     <Link href={item.href} passHref legacyBehavior>
                       <Nav.Link
                         className="d-flex align-items-center"
                         onClick={() => setNavbarToggled(false)}
+                        style={{
+                          padding: isMobile ? "4px 8px" : "8px 12px",
+                          fontSize: isMobile ? "0.85rem" : "1rem",
+                          minHeight: isMobile ? "32px" : "auto",
+                        }}
                       >
-                        {React.cloneElement(item.icon, { className: "me-1" })}
+                        {React.cloneElement(item.icon, {
+                          className: "me-1",
+                          size: isMobile ? 16 : 18,
+                        })}
                         {item.label}
                       </Nav.Link>
                     </Link>
@@ -360,6 +386,11 @@ const Topo = () => {
                             item.variant === "danger" ? "text-danger" : ""
                           }`}
                           onClick={() => setNavbarToggled(false)}
+                          style={{
+                            padding: isMobile ? "4px 8px" : "8px 12px",
+                            fontSize: isMobile ? "0.85rem" : "1rem",
+                            minHeight: isMobile ? "32px" : "auto",
+                          }}
                         >
                           {item.label}
                         </Nav.Link>

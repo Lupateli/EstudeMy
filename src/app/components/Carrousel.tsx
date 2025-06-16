@@ -61,7 +61,7 @@ function CarouselItem({ item }: { item: (typeof items)[0] }) {
   );
 }
 
-function Carousel() {
+function Carrousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (offset: number) => {
@@ -98,4 +98,4 @@ function Carousel() {
   );
 }
 
-export default Carousel;
+export default Carrousel;
