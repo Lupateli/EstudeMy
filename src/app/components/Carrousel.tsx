@@ -8,37 +8,37 @@ const items = [
   {
     id: 1,
     title: "Geografia",
-    image: "https://i.imgur.com/9T8QZtG.png",
+    image: "../img/geo.png",
     description: "Paises americanos",
   },
   {
     id: 2,
     title: "História",
-    image: "https://i.imgur.com/6z2LgQ2.png",
+    image: "../img/hist.png",
     description: "Nosso país",
   },
   {
     id: 3,
     title: "Banco de dados",
-    image: "https://i.imgur.com/NhZWq1E.png",
+    image: "../img/bd.png",
     description: "Banco de dados relacional",
   },
   {
     id: 4,
     title: "Matemática",
-    image: "https://i.imgur.com/9T8QZtG.png",
+    image: "../img/semImg.png",
     description: "Logaritmo",
   },
   {
     id: 5,
     title: "Português",
-    image: "https://i.imgur.com/6z2LgQ2.png",
+    image: "../img/semImg.png",
     description: "Substantivo",
   },
   {
     id: 6,
     title: "Ciências",
-    image: "https://i.imgur.com/6z2LgQ2.png",
+    image: "../img/semImg.png",
     description: "Biologia",
   },
 ];
@@ -50,9 +50,9 @@ function CarouselItem({ item }: { item: (typeof items)[0] }) {
         <img
           src={item.image}
           alt={item.title}
-          className="w-full h-auto object-contain mb-2 rounded-2xl"
+          className="w-60 h-50 object-contain mb-2 rounded-2xl"
         />
-        <h2 className="text-white font-semibold bg-amber-500 rounded px-2 py-1 text-sm md:text-base truncate">
+        <h2 className="text-white font-semibold bg-amber-500 rounded px-2 py-1 text-sm md:text-base lg:text-lg xl:text-xl truncate">
           {item.title}
         </h2>
         <p className="text-sm text-black-500 mt-1">{item.description}</p>

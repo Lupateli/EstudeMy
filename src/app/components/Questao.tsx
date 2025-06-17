@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export default function Conquistas() {
@@ -18,10 +17,10 @@ export default function Conquistas() {
            <p>" gramática" - ________________________________</p>
            <p>" durante toda a manhã" - ________________________________</p>
         </section>
-        <Button className="bg-light text-black">A: Sujeito composto</Button>
-        <Button className="bg-light text-black">B: Predicado verbal</Button>
-        <Button className="bg-light text-black">C: Predicado verbal</Button>
-        <Button className="bg-light text-black">D: Adjunto adverbial de tempo</Button>
+        <div className="flex space-x-2">
+          
+        </div>
+        
         </main>
     )
 }
