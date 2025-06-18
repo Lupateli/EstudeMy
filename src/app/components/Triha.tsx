@@ -3,7 +3,7 @@ import { BookText } from "lucide-react";
 function TooltipStart() {
   return (
     <div
-      className="absolute -top-14 animate-float bg-white text-blue-500 px-4 py-1 rounded shadow-md text-sm font-medium z-10
+      className="absolute -top-14 animate-float bg-white text-blue-500 px-4 py-1 rounded shadow-md text-2xl z-20
                 before:content-[''] before:absolute before:bottom-[-6px] before:left-1/2 before:-translate-x-1/2 
                 before:border-4 before:border-transparent before:border-t-white"
     >
