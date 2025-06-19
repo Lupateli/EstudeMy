@@ -1,4 +1,4 @@
-import Carousel from "@/app/components/Carrossel";
+import Carrousel from "@/app/components/Carrousel";
 import Footer from "@/app/components/Footer";
 import Topo from "@/app/components/Topo";
 
@@ -10,15 +10,15 @@ export default function menuTrilhas() {
         <div className="pt-3 w-full max-w-6xl mx-auto px-4">
           <div className=" text-3xl p-4 rounded-xl al">Continue</div>
         </div>
-        <Carousel />
+        <Carrousel />
         <div className="pt-3 w-full max-w-6xl mx-auto px-4">
           <div className="text-3xl p-4 rounded-xl al">Novidades</div>
         </div>
-        <Carousel />
+        <Carrousel />
         <div className="pt-3 w-full max-w-6xl mx-auto px-4">
           <div className="text-3xl p-4 rounded-xl al">Melhores para você</div>
         </div>
-        <Carousel />
+        <Carrousel />
       </div>
       <Footer />
     </>

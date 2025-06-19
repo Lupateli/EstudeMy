@@ -3,7 +3,7 @@ import { BookText } from "lucide-react";
 function TooltipStart() {
   return (
     <div
-      className="absolute -top-14 animate-float bg-white text-blue-500 px-4 py-1 rounded shadow-md text-sm font-medium z-10
+      className="absolute -top-14 animate-float bg-white text-blue-500 px-4 py-1 rounded shadow-md text-2xl z-20
                 before:content-[''] before:absolute before:bottom-[-6px] before:left-1/2 before:-translate-x-1/2 
                 before:border-4 before:border-transparent before:border-t-white"
     >
@@ -45,7 +45,7 @@ export default function Trilhas() {
           return (
             <div
               key={index}
-              className={`w-full flex items-center ${isLeft ? "justify-start pl-70" : "justify-end pr-60"}`}
+              className={`w-full flex items-center ${isLeft ? "justify-start pl-60" : "justify-end pr-56"}`}
             >
               <div className="relative flex flex-col items-center">
                 {/* Linha curta conectando botão à linha central */}
@@ -58,7 +58,7 @@ export default function Trilhas() {
                 <button
                   disabled={isLocked}
                   aria-disabled={isLocked}
-                  className={`w-20 h-20 rounded-circle shadow-xl flex items-center justify-center 
+                  className={`w-30 h-30 rounded-circle shadow-xl flex items-center justify-center 
                     transform active:translate-y-1 active:shadow-inner transition-all duration-100
                     ${buttonClass}`}
                 >

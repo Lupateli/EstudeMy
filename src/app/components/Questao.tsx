@@ -112,9 +112,10 @@ export default function Conquistas() {
             Próxima
           </button>
         </section>
-      ) : (
-        <div className="text-center text-xl font-bold">🏁 Você finalizou o quiz!</div>
-      )}
-    </main>
-  );
+        <Button className="bg-light text-black">A: Sujeito composto</Button>
+        <Button className="bg-light text-black">B: Predicado verbal</Button>
+        <Button className="bg-light text-black">C: Predicado verbal</Button>
+        <Button className="bg-light text-black">D: Adjunto adverbial de tempo</Button>
+        </main>
+    )
 }
