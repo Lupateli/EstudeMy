@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (email === 'admin@example.com' && senha === 'pisenha123' || email === 'teste@example.com' && senha === 'teste123pi' ) {
+    if (email === 'admin@example.com' && senha === 'pisenha123' || email === 'teste@example.com' && senha === 'teste123pi' || email === '1@1' && senha === '1' ) {
       return NextResponse.json({ sucesso: true, mensagem: 'Login realizado com sucesso!' });
     } else {
       return NextResponse.json(
