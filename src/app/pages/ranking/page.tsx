@@ -5,7 +5,14 @@ import Ranking from "@/app/components/Ranking";
 
 export default function RankingPage() {
   return (
-    <div className="flex min-h-screen flex-col transition-all duration-300 justify-space-between bg-gray-50">
+    <div 
+      className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
+      style={{
+        backgroundImage: "url('/img/backgroundteste1.png')",
+        backgroundColor: '#f3f4f6'
+      }}
+    >
+      <div className="relative z-10">
       <Topo />
       <div className="pt-3 w-full max-w-6xl mx-auto px-4">
         
@@ -14,6 +21,7 @@ export default function RankingPage() {
         
       </div>
       <Footer />
+    </div>
     </div>
   );
 }

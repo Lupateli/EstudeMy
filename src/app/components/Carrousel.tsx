@@ -26,31 +26,32 @@ const items = [
   {
     id: 4,
     title: "Matemática",
-    image: "../img/semImg.png",
+    image: "../img/mate.png",
     description: "Logaritmo",
   },
   {
     id: 5,
     title: "Português",
-    image: "../img/semImg.png",
+    image: "../img/port.png",
     description: "Substantivo",
   },
   {
     id: 6,
     title: "Ciências",
-    image: "../img/semImg.png",
+    image: "../img/cienc.png",
     description: "Biologia",
   },
 ];
 
 function CarouselItem({ item }: { item: (typeof items)[0] }) {
   return (
+    
     <Link href={`/pages/trilha?id=${item.id}`}>
       <div className="bg-white p-4 rounded-3xl shadow-md text-center hover:scale-105 transition-transform min-w-[220px] sm:min-w-[240px] md:min-w-[260px] lg:min-w-[280px] max-w-[90vw] flex-shrink-0">
         <img
           src={item.image}
           alt={item.title}
-          className="w-60 h-50 object-contain mb-2 rounded-2xl"
+          className="max-w-60 max-h-50 min-w-60 min-h-50 object-contain mb-2 rounded-2xl"
         />
         <h2 className="text-white font-semibold bg-amber-500 rounded px-2 py-1 text-sm md:text-base lg:text-lg xl:text-xl truncate">
           {item.title}
