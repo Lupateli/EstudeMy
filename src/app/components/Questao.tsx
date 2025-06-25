@@ -1,58 +1,83 @@
 import { useState } from "react";
 import React from 'react';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-
 
 const perguntas = [
   {
     id: 1,
-    texto: "Qual o nome do João Pedro Primeiro?",
-    alternativas: ["João Pedro", "Pedro I", "João I", "João Pedro Primeiro"],
-    resposta: 3,
+    texto: "Na frase 'O menino brincava no parque ontem', qual é o sujeito?",
+    alternativas: ["O menino", "brincava", "no parque", "ontem"],
+    resposta: 0,
   },
   {
     id: 2,
-    texto: "Qual a cor do cavalo branco de Napoleão?",
-    alternativas: ["Preto", "Marrom", "Cinza", "Branco"],
-    resposta: 3,
+    texto: "Qual é a classe gramatical da palavra 'rapidamente'?",
+    alternativas: ["Adjetivo", "Substantivo", "Advérbio", "Verbo"],
+    resposta: 2,
   },
   {
     id: 3,
-    texto: "Qual o nome do João Pedro Primeiro?",
-    alternativas: ["João Pedro", "Pedro I", "João I", "João Pedro Primeiro"],
-    resposta: 3,
+    texto: "Em 'As crianças estudaram muito', o predicado é:",
+    alternativas: ["As crianças", "estudaram muito", "muito", "crianças estudaram"],
+    resposta: 1,
   },
   {
     id: 4,
-    texto: "Qual a cor do cavalo branco de Napoleão?",
-    alternativas: ["Preto", "Marrom", "Cinza", "Branco"],
-    resposta: 3,
+    texto: "Qual palavra está no plural correto?",
+    alternativas: ["Capitães", "Capitãos", "Capitais", "Capitães"],
+    resposta: 0,
   },
   {
     id: 5,
-    texto: "Qual o nome do João Pedro Primeiro?",
-    alternativas: ["João Pedro", "Pedro I", "João I", "João Pedro Primeiro"],
-    resposta: 3,
+    texto: "A palavra 'feliz' é um:",
+    alternativas: ["Substantivo", "Adjetivo", "Advérbio", "Verbo"],
+    resposta: 1,
   },
   {
     id: 6,
-    texto: "Qual a cor do cavalo branco de Napoleão?",
-    alternativas: ["Preto", "Marrom", "Cinza", "Branco"],
+    texto: "Em 'João comprou o livro para Maria', 'para Maria' é:",
+    alternativas: ["Sujeito", "Predicado", "Objeto direto", "Objeto indireto"],
     resposta: 3,
+  },
+  {
+    id: 7,
+    texto: "Qual frase está com a concordância verbal correta?",
+    alternativas: ["Fazem dois anos que ele partiu", "Faz dois anos que ele partiu", "Fazem dois ano que ele partiu", "Faz dois ano que ele partiu"],
+    resposta: 1,
+  },
+  {
+    id: 8,
+    texto: "A palavra 'chuva' é:",
+    alternativas: ["Substantivo próprio", "Substantivo comum", "Adjetivo", "Pronome"],
+    resposta: 1,
+  },
+  {
+    id: 9,
+    texto: "Em 'Ela cantou lindamente', a palavra 'lindamente' modifica:",
+    alternativas: ["O sujeito 'Ela'", "O verbo 'cantou'", "A frase toda", "Nenhuma palavra"],
+    resposta: 1,
+  },
+  {
+    id: 10,
+    texto: "Qual é o feminino de 'ator'?",
+    alternativas: ["Atora", "Atriz", "Atura", "Actriz"],
+    resposta: 1,
   },
 ];
 
-export default function Conquistas() {
+export default function Quiz() {
   const [indiceAtual, setIndiceAtual] = useState(0);
-  const [respostaSelecionada, setRespostaSelecionada] = useState<number | null>(null);
+  const [respostaSelecionada, setRespostaSelecionada] = useState(null);
   const [finalizado, setFinalizado] = useState(false);
-  
+  const [pontuacao, setPontuacao] = useState(0);
 
   const perguntaAtual = perguntas[indiceAtual];
 
-  function selecionarResposta(indice: number) {
+  function selecionarResposta(indice) {
     if (respostaSelecionada === null) {
       setRespostaSelecionada(indice);
+      if (indice === perguntaAtual.resposta) {
+        setPontuacao(pontuacao + 1);
+      }
     }
   }
 
@@ -65,30 +90,55 @@ export default function Conquistas() {
     }
   }
 
-  const letra = (i: number) => String.fromCharCode(65 + i); // A, B, C, D...
+  function reiniciarQuiz() {
+    setIndiceAtual(0);
+    setRespostaSelecionada(null);
+    setFinalizado(false);
+    setPontuacao(0);
+  }
+
+  const letra = (i) => String.fromCharCode(65 + i); // A, B, C, D...
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
       {!finalizado ? (
-        <section className="w-full max-w-xl bg-white p-6 rounded shadow-md">
-          <h2 className="text-xl font-semibold mb-4">
-            Questão {indiceAtual + 1}: {perguntaAtual.texto}
+        <section className="w-full max-w-2xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+          <div className="mb-6">
+            <div className="flex justify-between items-center mb-4">
+              <h1 className="text-2xl font-bold text-gray-800">Quiz de Português</h1>
+              <span className="text-sm text-gray-500">
+                {indiceAtual + 1} de {perguntas.length}
+              </span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div 
+                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                style={{ width: `${((indiceAtual + 1) / perguntas.length) * 100}%` }}
+              ></div>
+            </div>
+          </div>
+
+          <h2 className="text-xl font-semibold mb-6 text-gray-800">
+            {perguntaAtual.texto}
           </h2>
 
-          <div className="flex flex-col gap-2 mb-6">
+          <div className="flex flex-col gap-3 mb-8">
             {perguntaAtual.alternativas.map((alt, i) => {
               const isCorreta = i === perguntaAtual.resposta;
               const isSelecionada = i === respostaSelecionada;
 
-              let cor = "bg-gray-200 text-black";
+              let cor = "bg-gray-50 text-gray-800 border-gray-200 hover:bg-gray-100";
 
               if (respostaSelecionada !== null) {
-                if (isSelecionada && isCorreta) cor = "bg-green-500 text-white";
-                else if (isSelecionada && !isCorreta) cor = "bg-red-500 text-white";
-                else if (isCorreta) cor = "bg-green-500 text-white";
-                else cor = "bg-gray-300 text-black";
-              } else if (isSelecionada) {
-                cor = "bg-blue-400 text-white";
+                if (isSelecionada && isCorreta) {
+                  cor = "bg-green-500 text-white border-green-500 shadow-lg";
+                } else if (isSelecionada && !isCorreta) {
+                  cor = "bg-red-500 text-white border-red-500 shadow-lg";
+                } else if (isCorreta) {
+                  cor = "bg-green-500 text-white border-green-500 shadow-lg";
+                } else {
+                  cor = "bg-gray-100 text-gray-500 border-gray-200";
+                }
               }
 
               return (
@@ -96,26 +146,69 @@ export default function Conquistas() {
                   key={i}
                   onClick={() => selecionarResposta(i)}
                   disabled={respostaSelecionada !== null}
-                  className={`w-full text-left px-4 py-2 rounded-md transition-colors duration-200 ${cor}`}
+                  className={`w-full text-left px-6 py-4 rounded-lg border-2 transition-all duration-200 font-medium ${cor} ${
+                    respostaSelecionada === null ? 'hover:shadow-md transform hover:-translate-y-0.5' : ''
+                  }`}
                 >
-                  {letra(i)}: {alt}
+                  <span className="font-bold">{letra(i)}:</span> {alt}
                 </button>
               );
             })}
           </div>
 
+          <div className="flex justify-between items-center">
+            <div className="text-sm text-gray-600">
+              Pontuação: {pontuacao}/{perguntas.length}
+            </div>
+            <button
+              onClick={proximaPergunta}
+              disabled={respostaSelecionada === null}
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium disabled:bg-gray-300 disabled:cursor-not-allowed"
+            >
+              {indiceAtual + 1 === perguntas.length ? 'Finalizar' : 'Próxima'}
+            </button>
+          </div>
+        </section>
+      ) : (
+        <section className="w-full max-w-2xl bg-white p-8 rounded-xl shadow-lg border border-gray-200 text-center">
+          <div className="mb-6">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Quiz Finalizado! 🎉
+            </h2>
+            <div className="text-6xl font-bold text-blue-600 mb-2">
+              {pontuacao}/{perguntas.length}
+            </div>
+            <p className="text-gray-600 text-lg">
+              {pontuacao === perguntas.length 
+                ? "Perfeito! Você acertou todas!" 
+                : pontuacao >= perguntas.length * 0.7 
+                ? "Muito bem! Ótimo desempenho!" 
+                : pontuacao >= perguntas.length * 0.5 
+                ? "Bom trabalho! Continue praticando!" 
+                : "Continue estudando e tente novamente!"}
+            </p>
+          </div>
+          
+          <div className="mb-6">
+            <div className="w-full bg-gray-200 rounded-full h-4">
+              <div 
+                className="bg-gradient-to-r from-blue-500 to-green-500 h-4 rounded-full transition-all duration-1000"
+                style={{ width: `${(pontuacao / perguntas.length) * 100}%` }}
+              ></div>
+            </div>
+            <p className="text-sm text-gray-600 mt-2">
+              {Math.round((pontuacao / perguntas.length) * 100)}% de acertos
+            </p>
+          </div>
+
           <button
-            onClick={proximaPergunta}
-            disabled={respostaSelecionada === null}
-            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
+            onClick={reiniciarQuiz}
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
           >
-            Próxima
+            Fazer Quiz Novamente
           </button>
         </section>
-        <Button className="bg-light text-black">A: Sujeito composto</Button>
-        <Button className="bg-light text-black">B: Predicado verbal</Button>
-        <Button className="bg-light text-black">C: Predicado verbal</Button>
-        <Button className="bg-light text-black">D: Adjunto adverbial de tempo</Button>
-        </main>
-    )
+      )}
+    </main>
+  );
 }

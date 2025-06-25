@@ -1,7 +1,5 @@
 "use client";
-import { useState } from "react";
 import React from "react";
-import { Button } from "react-bootstrap";
 
 export default function MinhaConta() {
   const user = {
@@ -16,18 +14,16 @@ export default function MinhaConta() {
   const handleSair = () => alert("Você saiu da conta");
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <div className="bg-white p-6 rounded shadow-md w-full max-w-md">
+    <div className="p-4">
+      <div className="bg-white p-6 rounded shadow-md w-full max-w-md mx-auto">
         <div className="text-center mb-4">
           <h2 className="text-2xl font-bold">Minha Conta</h2>
-          <Button
-            variant="danger"
+          <button
             onClick={handleSair}
             className="bg-red-500 text-white px-4 py-1 mt-2 rounded hover:bg-red-600"
-            href="/"
           >
             Sair
-          </Button>
+          </button>
         </div>
 
         {/* Informações Pessoais */}
@@ -47,19 +43,18 @@ export default function MinhaConta() {
             <span className="font-medium">Telefone:</span>
             <span>{user.telefone}</span>
           </div>
-          <div className="flex justify-between p-4 border-t bg-white sticky bottom-0">
-            <Button
+          <div className="flex flex-col sm:flex-row gap-2 pt-4 border-t">
+            <button
               onClick={handleEditar}
-              className="bg-blue-600 text-white px-6 py-2 rounded transition"
+              className="bg-blue-600 text-white px-6 py-2 rounded transition hover:bg-blue-700 flex-1"
             >
               Editar Informações
-            </Button>
-            <Button
-              className="bg-blue-600 text-white px-6 py-2 rounded transition"
-              href="/pages/criarTrilha"
+            </button>
+            <button
+              className="bg-blue-600 text-white px-6 py-2 rounded transition hover:bg-blue-700 flex-1"
             >
               Criar Trilha
-            </Button>
+            </button>
           </div>
         </div>
 

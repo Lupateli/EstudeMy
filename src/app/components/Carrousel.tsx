@@ -7,10 +7,11 @@ import { useRef } from "react";
 const items = [
   {
     id: 1,
-    title: "Geografia",
-    image: "../img/geo.png",
-    description: "Paises americanos",
+    title: "Português",
+    image: "../img/port.png",
+    description: "Substantivo",
   },
+  
   {
     id: 2,
     title: "História",
@@ -31,10 +32,11 @@ const items = [
   },
   {
     id: 5,
-    title: "Português",
-    image: "../img/port.png",
-    description: "Substantivo",
+    title: "Geografia",
+    image: "../img/geo.png",
+    description: "Paises americanos",
   },
+  
   {
     id: 6,
     title: "Ciências",
