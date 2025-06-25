@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { BookText } from "lucide-react";
 
 function TooltipStart() {
@@ -35,9 +35,7 @@ export default function Trilhas() {
         </button>
       </div>
 
-
       <div className="relative w-full max-w-3xl flex flex-col items-center gap-12 px-6">
-
         <div className="absolute top-10 bottom-0 left-1/2 w-[2px] -translate-x-1/2"></div>
 
         {buttons.map((_, index) => {
@@ -51,10 +49,11 @@ export default function Trilhas() {
           return (
             <div
               key={index}
-              className={`w-full flex items-center ${isLeft ? "justify-start pl-60" : "justify-end pr-56"}`}
+              className={`w-full flex items-center ${
+                isLeft ? "justify-start pl-60" : "justify-end pr-56"
+              }`}
             >
               <div className="relative flex flex-col items-center">
-
                 <div
                   className={`w-6 h-0.5 mb-2 ${isLeft ? "mr-auto" : "ml-auto"}`}
                 ></div>
@@ -71,7 +70,6 @@ export default function Trilhas() {
                 >
                   ★
                 </button>
-                
 
                 <span className="mt-2 text-sm text-gray-600">
                   {isLocked ? "Bloqueado" : `Trilha ${index + 1}`}

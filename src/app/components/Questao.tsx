@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from 'react';
+import { Button } from "react-bootstrap";
 
 const perguntas = [
   {
@@ -23,7 +24,7 @@ const perguntas = [
   {
     id: 4,
     texto: "Qual palavra está no plural correto?",
-    alternativas: ["Capitães", "Capitãos", "Capitais", "Capitães"],
+    alternativas: ["Capitães", "Capitãos", "Capitais", "Capites"],
     resposta: 0,
   },
   {
@@ -72,6 +73,12 @@ export default function Quiz() {
 
   const perguntaAtual = perguntas[indiceAtual];
 
+  const handleButtonClick = (buttonIndex) => {
+    if (buttonIndex < buttons.length - 2) {
+      window.location.href = `trilha`;
+    }
+  };
+
   function selecionarResposta(indice) {
     if (respostaSelecionada === null) {
       setRespostaSelecionada(indice);
@@ -90,12 +97,7 @@ export default function Quiz() {
     }
   }
 
-  function reiniciarQuiz() {
-    setIndiceAtual(0);
-    setRespostaSelecionada(null);
-    setFinalizado(false);
-    setPontuacao(0);
-  }
+
 
   const letra = (i) => String.fromCharCode(65 + i); // A, B, C, D...
 
@@ -105,15 +107,19 @@ export default function Quiz() {
         <section className="w-full max-w-2xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
           <div className="mb-6">
             <div className="flex justify-between items-center mb-4">
-              <h1 className="text-2xl font-bold text-gray-800">Quiz de Português</h1>
+              <h1 className="text-2xl font-bold text-gray-800">
+                Quiz de Português
+              </h1>
               <span className="text-sm text-gray-500">
                 {indiceAtual + 1} de {perguntas.length}
               </span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <div 
+              <div
                 className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                style={{ width: `${((indiceAtual + 1) / perguntas.length) * 100}%` }}
+                style={{
+                  width: `${((indiceAtual + 1) / perguntas.length) * 100}%`,
+                }}
               ></div>
             </div>
           </div>
@@ -127,7 +133,8 @@ export default function Quiz() {
               const isCorreta = i === perguntaAtual.resposta;
               const isSelecionada = i === respostaSelecionada;
 
-              let cor = "bg-gray-50 text-gray-800 border-gray-200 hover:bg-gray-100";
+              let cor =
+                "bg-gray-50 text-gray-800 border-gray-200 hover:bg-gray-100";
 
               if (respostaSelecionada !== null) {
                 if (isSelecionada && isCorreta) {
@@ -147,7 +154,9 @@ export default function Quiz() {
                   onClick={() => selecionarResposta(i)}
                   disabled={respostaSelecionada !== null}
                   className={`w-full text-left px-6 py-4 rounded-lg border-2 transition-all duration-200 font-medium ${cor} ${
-                    respostaSelecionada === null ? 'hover:shadow-md transform hover:-translate-y-0.5' : ''
+                    respostaSelecionada === null
+                      ? "hover:shadow-md transform hover:-translate-y-0.5"
+                      : ""
                   }`}
                 >
                   <span className="font-bold">{letra(i)}:</span> {alt}
@@ -165,7 +174,7 @@ export default function Quiz() {
               disabled={respostaSelecionada === null}
               className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium disabled:bg-gray-300 disabled:cursor-not-allowed"
             >
-              {indiceAtual + 1 === perguntas.length ? 'Finalizar' : 'Próxima'}
+              {indiceAtual + 1 === perguntas.length ? "Finalizar" : "Próxima"}
             </button>
           </div>
         </section>
@@ -179,19 +188,19 @@ export default function Quiz() {
               {pontuacao}/{perguntas.length}
             </div>
             <p className="text-gray-600 text-lg">
-              {pontuacao === perguntas.length 
-                ? "Perfeito! Você acertou todas!" 
-                : pontuacao >= perguntas.length * 0.7 
-                ? "Muito bem! Ótimo desempenho!" 
-                : pontuacao >= perguntas.length * 0.5 
-                ? "Bom trabalho! Continue praticando!" 
+              {pontuacao === perguntas.length
+                ? "Perfeito! Você acertou todas!"
+                : pontuacao >= perguntas.length * 0.7
+                ? "Muito bem! Ótimo desempenho!"
+                : pontuacao >= perguntas.length * 0.5
+                ? "Bom trabalho! Continue praticando!"
                 : "Continue estudando e tente novamente!"}
             </p>
           </div>
-          
+
           <div className="mb-6">
             <div className="w-full bg-gray-200 rounded-full h-4">
-              <div 
+              <div
                 className="bg-gradient-to-r from-blue-500 to-green-500 h-4 rounded-full transition-all duration-1000"
                 style={{ width: `${(pontuacao / perguntas.length) * 100}%` }}
               ></div>
@@ -201,12 +210,12 @@ export default function Quiz() {
             </p>
           </div>
 
-          <button
-            onClick={reiniciarQuiz}
+          <Button
+            href = "/pages/trilha"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
           >
-            Fazer Quiz Novamente
-          </button>
+            Voltar para trilha
+          </Button>
         </section>
       )}
     </main>
