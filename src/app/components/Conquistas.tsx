@@ -21,7 +21,7 @@ export default function Conquistas() {
       </div>
 
       <div className="mt-4">
-        <h3 className="text-white font-semibold">Geográfia</h3>
+        <h3 className="text-white font-semibold">Geografia</h3>
         <p className="text-gray-400 text-sm">Obtenha todas as outras conquistas</p>
       </div>
 

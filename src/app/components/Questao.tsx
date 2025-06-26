@@ -24,7 +24,7 @@ const perguntas = [
   {
     id: 4,
     texto: "Qual palavra está no plural correto?",
-    alternativas: ["Capitães", "Capitãos", "Capitais", "Capites"],
+    alternativas: ["Capitães", "Capitãos", "Capitos", "Capites"],
     resposta: 0,
   },
   {
@@ -102,7 +102,7 @@ export default function Quiz() {
   const letra = (i) => String.fromCharCode(65 + i); // A, B, C, D...
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+    <main className="min-h-screen flex flex-col items-center justify-center ">
       {!finalizado ? (
         <section className="w-full max-w-2xl bg-white p-8 rounded-xl shadow-lg border border-gray-200">
           <div className="mb-6">

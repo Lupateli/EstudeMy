@@ -22,7 +22,7 @@ export default function Trilhas() {
   };
 
   return (
-    <div className="bg-white min-h-screen flex flex-col items-center pt-10">
+    <div className=" min-h-screen flex flex-col items-center pt-10">
       {/* Cabeçalho com azul igual aos botões */}
       <div className="bg-blue-500 rounded-t-xl px-6 py-4 mb-12 shadow-md text-white w-[90%] max-w-3xl flex justify-between items-center">
         <div>
@@ -64,8 +64,8 @@ export default function Trilhas() {
                   onClick={() => handleButtonClick(index)}
                   disabled={isLocked}
                   aria-disabled={isLocked}
-                  className={`w-16 h-16 shadow-xl flex items-center justify-center text-xl font-bold
-                    transform active:translate-y-1 active:shadow-inner transition-all duration-200
+                  className={`w-20 h-20 shadow-xl flex items-center justify-center text-xl font-bold rounded-circle
+                    transform active:translate-y-1  active:shadow-inner transition-all duration-200
                     ${buttonClass}`}
                 >
                   ★

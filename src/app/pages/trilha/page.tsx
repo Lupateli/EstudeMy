@@ -8,7 +8,7 @@ export default function Home() {
     <div 
       className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
       style={{
-        backgroundImage: "url('/img/background-image-login-register.png')",
+        backgroundImage: "url('/img/backgroundteste1.png')",
         backgroundColor: '#f3f4f6'
       }}
     >
