@@ -12,7 +12,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Sempre retorna que o email foi enviado, para qualquer email válido
     return NextResponse.json(
       { 
         sucesso: true, 

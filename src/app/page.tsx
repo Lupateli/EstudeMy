@@ -23,7 +23,6 @@ export default function LandingPage() {
     >
       <CoinRain />
 
-      {/* BANNERS MAIS VISÍVEIS */}
       <div className="fixed top-1/2 left-4 z-30 flex flex-col gap-6 -translate-y-1/2">
         {tooltips.map(({ icon, text, color }, index) => (
           <div className="group relative flex items-center" key={index}>
@@ -49,7 +48,6 @@ export default function LandingPage() {
         ))}
       </div>
 
-      {/* CONTEÚDO CENTRAL */}
       <div className="flex-grow flex flex-col justify-center items-center px-4 py-6 overflow-hidden relative z-10">
         <section className="text-center max-w-3xl mb-12">
           <div className="mb-6">

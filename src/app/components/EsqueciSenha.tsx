@@ -9,7 +9,7 @@ const Esquecisenha = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [erro, setErro] = useState("");
-  const [sucesso, setSucesso] = useState(false); // Novo estado para mensagem de sucesso
+  const [sucesso, setSucesso] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,7 +26,7 @@ const Esquecisenha = () => {
       const data = await res.json();
 
       if (res.ok && data.sucesso) {
-        setSucesso(true); // Mostra mensagem de sucesso ao invés de redirecionar
+        setSucesso(true); 
       } else {
         setErro(data.mensagem || "Erro ao enviar email");
       }

@@ -42,7 +42,7 @@ const perguntas = [
   {
     id: 7,
     texto: "Qual frase está com a concordância verbal correta?",
-    alternativas: ["Fazem dois anos que ele partiu", "Faz dois anos que ele partiu", "Fazem dois ano que ele partiu", "Faz dois ano que ele partiu"],
+    alternativas: ["Fazem dois anos que ele partiu", "Faz dois anos que ele partiu", "Fazem anos que ele partiu", "Faz anos que ele partiu"],
     resposta: 1,
   },
   {
@@ -99,8 +99,8 @@ export default function Quiz() {
 
 
 
-  const letra = (i) => String.fromCharCode(65 + i); // A, B, C, D...
-
+  const letra = (i) => String.fromCharCode(65 + i); 
+  
   return (
     <main className="min-h-screen flex flex-col items-center justify-center ">
       {!finalizado ? (

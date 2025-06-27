@@ -25,7 +25,6 @@ const Topo = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detectar se é mobile
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 992);
@@ -84,7 +83,6 @@ const Topo = () => {
     { href: "/", label: "Sair", variant: "danger" },
   ];
 
-  // Fechar sidebar ao clicar em um link (apenas no mobile)
   const handleSidebarLinkClick = () => {
     if (isMobile) {
       setSidebarToggled(false);
@@ -93,7 +91,6 @@ const Topo = () => {
 
   return (
     <div className="flex">
-      {/* Botão da Sidebar para Mobile */}
       {isMobile && (
         <button
           onClick={() => setSidebarToggled(!sidebarToggled)}
@@ -120,7 +117,6 @@ const Topo = () => {
         </button>
       )}
 
-      {/* Overlay para fechar sidebar no mobile */}
       {isMobile && sidebarToggled && (
         <div
           style={{
@@ -136,7 +132,6 @@ const Topo = () => {
         />
       )}
 
-      {/* Sidebar */}
       <Sidebar
         collapsed={isMobile ? false : collapsed}
         toggled={false}
@@ -173,7 +168,7 @@ const Topo = () => {
             },
           }}
         >
-          {/* Ícone do menu */}
+
           <MenuItem
             icon={<List className="text-white" size={20} />}
             onClick={() => {
@@ -195,7 +190,7 @@ const Topo = () => {
             )}
           </MenuItem>
 
-          {/* Itens da sidebar */}
+   
           <div
             style={{
               height: "calc(100vh - 120px)",
@@ -219,7 +214,7 @@ const Topo = () => {
             ))}
           </div>
 
-          {/* ConsultAI no bottom */}
+      
           <div
             style={{
               position: "absolute",
@@ -253,7 +248,7 @@ const Topo = () => {
         </Menu>
       </Sidebar>
 
-      {/* Main Content */}
+
       <div
         style={{
           marginLeft: isMobile ? "0px" : collapsed ? "0px" : "00px",
@@ -299,7 +294,7 @@ const Topo = () => {
               </div>
             </Link>
 
-            {/* Botão do Navbar (apenas para itens do navbar) */}
+
             <Navbar.Toggle
               aria-controls="top-navbar"
               onClick={() => setNavbarToggled(!navbarToggled)}
@@ -342,7 +337,6 @@ const Topo = () => {
                   </Nav.Item>
                 ))}
 
-                {/* Desktop: Dropdown "Mais" */}
                 {!isMobile && (
                   <Nav.Item as="li" className="dropdown-container">
                     <div
@@ -376,7 +370,7 @@ const Topo = () => {
                   </Nav.Item>
                 )}
 
-                {/* Mobile: Itens do "Mais" direto na navbar */}
+ 
                 {isMobile &&
                   dropdownItems.map((item, index) => (
                     <Nav.Item as="li" key={`mobile-${index}`}>

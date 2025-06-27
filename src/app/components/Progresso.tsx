@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { Star } from "lucide-react"; // ou use ícones SVG comuns
+import { Star } from "lucide-react"; 
 
 export default function Progresso() {
   return (
@@ -8,18 +8,16 @@ export default function Progresso() {
       {/* Imagem do curso */}
       <div className="relative h-[160px]">
         <Image
-          src="/img/ConsultAi.png" // Coloque a imagem na pasta public/
+          src="/img/ConsultAi.png"
           alt="Imagem do curso"
           layout="fill"
           objectFit="cover"
         />
-        {/* Menu de opções (três pontinhos) */}
         <div className="absolute top-2 right-2 text-black bg-white rounded-full w-6 h-6 flex items-center justify-center shadow">
           <span>⋮</span>
         </div>
       </div>
 
-      {/* Conteúdo do card */}
       <div className="p-3">
         <h3 className="font-semibold text-gray-800 text-base leading-tight">
           Algoritmos e Lógica de Programação - O Curso...

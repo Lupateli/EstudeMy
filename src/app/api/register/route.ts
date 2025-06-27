@@ -13,9 +13,6 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    // Aqui você pode adicionar lógica para salvar no banco, checar se email existe, etc
-    // Por enquanto, só simula sucesso
-
     console.log('Dados recebidos para cadastro:', { nome, email })
 
     return NextResponse.json({

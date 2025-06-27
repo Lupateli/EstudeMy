@@ -7,7 +7,6 @@ export default function CriarTrilha() {
           <span className="text-pink-500">trilha</span>
         </h1>
 
-        {/* Título */}
         <div>
           <label className="block font-semibold mb-1">Escreva aqui o nome de sua trilha</label>
           <input
@@ -17,7 +16,7 @@ export default function CriarTrilha() {
           />
         </div>
 
-        {/* Descrição */}
+
         <div>
           <label className="block font-semibold mb-1">Descreva o tema de sua trilha</label>
           <textarea
@@ -26,7 +25,6 @@ export default function CriarTrilha() {
           />
         </div>
 
-        {/* Datas */}
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="flex-1">
             <label className="block font-semibold mb-1">Data de criação</label>
@@ -43,8 +41,6 @@ export default function CriarTrilha() {
             />
           </div>
         </div>
-
-        {/* Tema e Dificuldade */}
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="flex-1">
             <label className="block font-semibold mb-1">Tema da trilha</label>
@@ -64,7 +60,6 @@ export default function CriarTrilha() {
           </div>
         </div>
 
-        {/* Disponibilidade */}
         <div>
           <p className="font-semibold mb-1">Disponibilidade da trilha:</p>
           <label className="mr-4">
@@ -75,7 +70,6 @@ export default function CriarTrilha() {
           </label>
         </div>
 
-        {/* Pago ou gratuito */}
         <div>
           <p className="font-semibold mb-1">Paga ou gratuita:</p>
           <label className="mr-4">

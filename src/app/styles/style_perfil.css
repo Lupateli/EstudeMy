@@ -55,7 +55,6 @@ header .user-img {
   margin-left: 10px;
 }
 
-/* Botões */
 .buttons-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -84,7 +83,6 @@ header .user-img {
   display: block;
 }
 
-/* Personagem */
 .character img {
   width: 150px;
   margin: 20px 0;
@@ -95,7 +93,7 @@ header .user-img {
   font-weight: bold;
 }
 
-/* Rodapé */
+
 footer {
   display: flex;
   justify-content: center;
